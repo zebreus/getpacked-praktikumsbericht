@@ -29,11 +29,17 @@ Vorher sind alle Deployments per Hand ausgelöst worden, was einige probleme zur
 #### Umstellen der Codebase auf striktes TypeScript
 Eine meiner ersten Aufgaben war es die Codebase der Webanwendung für eine Umstellung von JavaScript auf TypeScript vorzubereiten. Das Team hatte vorher schon angefangen TypeScript im Serverseitigem Code zu verwenden. Dort wurden aber die meisten Funktionen zur starken Überprüfung der Typen abgestellt, um die Entwicklungsgeschwindigkeit zu erhöhen, wodurch allerdings die
 #### Refactoring des Codes
-- Code aus Anfangszeiten von getpacked 
+- Code aus Anfangszeiten von getpacked
+Da der Code aus den ersten Monaten von getpacked 
 #### Logik für datenkonsitenz auf Serverseite migrieren
 Da
 #### Einarbeiten und verwenden verschiedener mir neuer Technologien
 #### Performance optimierung eine Webanwendung
+Eines meiner Projekte war die Optimierung der Ladezeit der Webseite.
+Da getpacked mit React gebaut ist, wurde komplett auf clientseitiges rendering gesetzt. Da die Unterscheidug zwischen verschiedenen Unterseiten (z.B. der Shop für Kunden oder das Admininterface zur verwaltung der Shops) dabei nur Clientseitig erfolgt wurden auf jedet Seite alle Skripte geladen. Ausserdem wird bei clientseitigem rendering erstmal eine leere Webseite qusfeliefert, die dann noch mit Inhalt gefüllt werden muss, was auch etwas Zeit braucht.
+Wir haben verschiedene Lösungen für diese Probleme geprüft und haben uns dann für nextjs entschieden, da es diese beiden Problem relativ automatisch löst. 
+Ein weiteres Performanceproblem war, dass auf der Seite oft Dinge in mehreren Stufen geladen aus der Datenbank geladen werden mussten. Zum Beispiel mussten im Frontend erst alle Produktgruppen geladen werden, und danach konnten erst die einzelnen Artikel geladen werden, da ihre IDs in den Produktgruppen gespeichert sind.
+Wir konnten diese Probleme auf nicht durch vorgenerierte nextjs Seiten lösen, da alle angezeigten Daten in echtzeit mit der Datenbank synchronisiert werden, wozu aber eine Verbindung mit der Datenbank bestehen  Der erste Schritte dazu, war die Umstellung der Webseite auf nextjs, wodurch es einfachet wurde die benö
 #### Umstellen auf css auf Komponentenebene
 Bei normalen css Stylesheets erstellt man global gültige Klassennamen, die auf alle HTML Elemente einer bestimmten Klasse angewandt werden. In Komponentenbasieren Webanwendungen führt das oft zu Problemen, da wenn mehrere Komponenten den selben Klassennamen verwenden, sie sich dadurch auch oft unbemerkt gegenseitig beinflussen. In getpacked hatten wir zum Beispiel die Klasse `cartButton` die zum einen einen Knopf mit dem Preis des aktuellen Warenkorbs, der diesen auch öffnet gestaltet, zum anderen aber auch den Knopf um ein Produkt in den Warenkorb hinzuzufügen. Da beide Knöpfe relativ ähnlich aussahen, ist nicht aufgefallen, dass beide den die selbe CSS Klasse benutzen, bis wir die Farbe von einem anpassen wollten, was dann aber auch den anderen betroffen hat. Die Lösung war das Problem war es auf css mdoule umzustellen, dabei sind Klassennamen immer an eine Komponente gebunden. Erreicht wird das dadurch, dass die Namen der CSS Klassen im Buildprozess so modifiziert werden, dass sie einzigartig sind. So wird aus dem `cartButton` in der Basket Komponent zum Beispiel `Basket_cartButton_be8j3`.
 #### Wechsel des JavaScript Frameworks
