@@ -108,3 +108,65 @@ Anderes:
 - firestore emulator (+ hostname)
 - testcafe
 - keine unittests
+
+Reflexion
+---------
+
+Habe ich meine Ziele (fachlich, persönlich) termingerecht erreicht? Bin ich zufrieden mit dem Ergebnis?
+    • Teilweise
+    • CHANCE war relativ erfolgreich
+    • Konzentratorvariablen habe ich nicht zueende führen können
+
+- Musste ich Anpassungen durchführen? Wie bin ich damit umgegangen?
+    • Berichtigungswünsche zu meinen Tickets wurden häufig im Review Prozess als Kommentare hinterlassen
+    • Habe diese schnellstmöglich durchgeführt und Dankbarkeit für den Prozess, statt wie früher vor Allem Ärger auf mich selbst
+    • Mit der Zeit immer schneller nach Lösungen zu Problemen (zb commit Nachricht zum Falschen Ticket) in einem der Dailys gefragt
+
+- Welche Projektabschnitte/Tätigkeiten waren eine Herausforderung für mich? (Begründung)
+    • Wissen wann ich nachfragen sollte und wann ich es weiter selbst versuchen sollte
+    • Zeitmanagement von zwei Projekten gleichzeitig
+    • Sichtung alten, nicht optimalen oder toolgenerierten codes
+
+- Wie habe ich die Situation gelöst? Bin ich zufrieden mit dem Resultat? (Erklärung)
+    • Mit der Zeit immer besser für mich verstanden, wann ich fragen sollte (und das Wissen, dass ich das immer „darf“)
+    • Ansprechen von Problemen immer einfacher
+
+- Würde ich die Situation heute ähnlich angehen? Wie könnte ich meine Vorgehensweise verbessern? (Idee)
+    • Ähnlich zu der Vorgehensweise, die ich zum Ende des Praktikums gemacht habe
+    • Also schnell präzise Nachfragen stellen, vor Allem bei Prozessrelevanten Dingen
+    • Aber auch inhaltliche Dinge nicht zu lange selbst versuchen, da dadurch „verrant“ 
+
+- Welche Projektabschnitte/Tätigkeiten waren meine Höhepunkte bei dem Projekt? (Begründung)
+    • Erfahrung in einem „echten“ SCRUM Projekt sammeln und soziale Kompetenzen stärken
+    • Das Projekt in kurzer Zeit entwickeln sehen
+
+- Worauf bin ich am meisten stolz? Was war mein Anteil daran? (Erklärung)
+    • Ein produktives Mitglied diese Teams gewesen zu sein und an einem „echten“ Projekt zu arbeiten
+    • Steigerung des selbstbewussten Auftreten bei Präsentationen von Arbeitsfortschritten in Videokonferenzen
+
+- Wie könnte ich diese Leistung/Verhalten auch in anderen Situationen nutzen? (Idee)
+    • Soziale Kompetenzen weiter pflegen
+    • SCRUM-Ähnliche Arbeitsweisen auch in anderen (privarten) Projekten beibehalten
+
+
+Selbstreflexion auf Individualebene
+- Was kann ich besonders gut? (im Vergleich mit anderen)
+    • Details erkennen (zb falsche URL)
+    • Kreative Lösungen mit vorhandenen Mitteln
+
+- Wo sind meine Grenzen/Schwächen?
+    • Soziales
+    • Sehr korrekter Umgang mit den Bibliotheken
+    • Sebstsicherheit meinem Code gegenüber
+    • Wissen was ich wann nachfragen soll
+    • Abschätzen von Arbeitsaufwänden
+
+- Wie werde ich von anderen eingeschätzt? Wie nehmen mich andere wahr?
+    • Kompetent und immer eine Lösung findend (verzeifelt an Konz.var, Tobias Gespräch)
+    • Grundsätzlich zurückhaltend
+
+- Stimmen Selbst- und Fremdeinschätzung überein? Wenn nicht, was bedeutet das für mich?
+    • Relativ negatives Selbstbild
+    • Kann mehr an meine eigenen Kompetenzen glauben und so mit der Zeit mehr Selbstbewusstsein aufbauen
+
+### Was habe ich persönlich innerhalb des Projektes gelernt? 
