@@ -108,65 +108,68 @@ Anderes:
 - firestore emulator (+ hostname)
 - testcafe
 - keine unittests
+- sentry
 
 Reflexion
 ---------
 
-Habe ich meine Ziele (fachlich, persönlich) termingerecht erreicht? Bin ich zufrieden mit dem Ergebnis?
-    • Teilweise
-    • CHANCE war relativ erfolgreich
-    • Konzentratorvariablen habe ich nicht zueende führen können
+### Welche Ziele habe ich mir im praktium gesetzt
+Im Praktikum hatte ich mehrere Ziele und Aufgaben, vor allem wollte ich die Codebase und alles drumherum aufräumen und strukturieren, und dafür sorgen dass sie auch sauber bleibt. Ein weiteres Aufgabe war es eine Such und Übersichtsseite für alle Betriebe in getpacked zu erstellen. Ausserdem hab ich mir selbst das Ziel gesetzt, nachhaltig zu lernen, wie man möglichst effektiv moderne Webanwendungen baut und wollte dazu möglichst viele Werkzeuge ausprobieren.
 
-- Musste ich Anpassungen durchführen? Wie bin ich damit umgegangen?
-    • Berichtigungswünsche zu meinen Tickets wurden häufig im Review Prozess als Kommentare hinterlassen
-    • Habe diese schnellstmöglich durchgeführt und Dankbarkeit für den Prozess, statt wie früher vor Allem Ärger auf mich selbst
-    • Mit der Zeit immer schneller nach Lösungen zu Problemen (zb commit Nachricht zum Falschen Ticket) in einem der Dailys gefragt
+### Ziele erfüllt:
+#### Aufräumen und strukturieren
+Ich glaube ich konnte während meiner Zeit bei getpacked die Lesbarkeit und Wartbarkeit des Programms deutlich verbessern. Was ich in der Zeit besonders geschätzt habe, war das ich relativ viel Zeit in Dinge investieren durfte, die nicht direkt Features für das Produkt bringen, sondern nur langfristig die Geschwindigkeit mit der neue Dinge entwickelt werden können erhöhen. Ausserdem fand ich es cool, dass nahezu alle meiner Bestrebungen in die Richtungen auch von meinen Kollegen angenommen wurden. (Nur das entfernen von unbenutzten imports beim speichern ist auf Wiederstand gestossen).
 
-- Welche Projektabschnitte/Tätigkeiten waren eine Herausforderung für mich? (Begründung)
-    • Wissen wann ich nachfragen sollte und wann ich es weiter selbst versuchen sollte
-    • Zeitmanagement von zwei Projekten gleichzeitig
-    • Sichtung alten, nicht optimalen oder toolgenerierten codes
+- Noch irgendwie erwähnen, dass das schon irgendwie eins meiner Ziele von anfang an war, ich hab afaik sogar im Vorstellungsgespräch verlangt, dass ich 1 woche im Monat komplett auf refactoring setzen darf.
 
-- Wie habe ich die Situation gelöst? Bin ich zufrieden mit dem Resultat? (Erklärung)
-    • Mit der Zeit immer besser für mich verstanden, wann ich fragen sollte (und das Wissen, dass ich das immer „darf“)
-    • Ansprechen von Problemen immer einfacher
+#### Lernen von Webentwicklung
+Webentwicklung mit React ist jetzt auch eine der Sachen die ich kann. Was mich überrascht hat, war es zu sehen, wie einfach man mit moderenen Frameworks/Tools komplexe UIs strukturien kann. Vorher hatte ich hauptsächlich mit Qt gearbeitet, dabei kam mir das erstellen von UIs immer unnötig aufwändig vor, ich hatte aber akzeptiert, dass es wahrscheinlich nicht viel einfacher geht. Ausserdem kann ich jetzt JavaScript, was auch nützlich ist.
 
-- Würde ich die Situation heute ähnlich angehen? Wie könnte ich meine Vorgehensweise verbessern? (Idee)
-    • Ähnlich zu der Vorgehensweise, die ich zum Ende des Praktikums gemacht habe
-    • Also schnell präzise Nachfragen stellen, vor Allem bei Prozessrelevanten Dingen
-    • Aber auch inhaltliche Dinge nicht zu lange selbst versuchen, da dadurch „verrant“ 
+#### Was hab ich sonst noch gelernt oder ausprobiert
+- webbasierte entwicklung (gitpod)
+- ai autocomplete (tabnine & copilot)
+- ttd
+- gitlab ci
+- no code api glue tools ???  (integromat, n8n)
+- überhaupt Dinge möglichst simpel modellieren
 
-- Welche Projektabschnitte/Tätigkeiten waren meine Höhepunkte bei dem Projekt? (Begründung)
-    • Erfahrung in einem „echten“ SCRUM Projekt sammeln und soziale Kompetenzen stärken
-    • Das Projekt in kurzer Zeit entwickeln sehen
-
-- Worauf bin ich am meisten stolz? Was war mein Anteil daran? (Erklärung)
-    • Ein produktives Mitglied diese Teams gewesen zu sein und an einem „echten“ Projekt zu arbeiten
-    • Steigerung des selbstbewussten Auftreten bei Präsentationen von Arbeitsfortschritten in Videokonferenzen
-
-- Wie könnte ich diese Leistung/Verhalten auch in anderen Situationen nutzen? (Idee)
-    • Soziale Kompetenzen weiter pflegen
-    • SCRUM-Ähnliche Arbeitsweisen auch in anderen (privarten) Projekten beibehalten
+### Herausforderungen:
+- anfangs Diskussionen über Geschäftsmodell, aber irgendwann ignoriert, weil nicht im Aufgabenbereich 
+- Web-Entwicklung, weil noch nie vorher gemacht; aber gut geklappt, weil Programmieren an sich schon bekannt + Google -> hat gereicht; selbst aufs Projekt bezogen beigebracht -> Projekt bzw Praktikum in dem Bereich hat geholfen, dass Web-Entwicklung jetzt deutlich routinierter und kompetenter (alle Möglichkeiten bekannt) ablaufen würde; 
 
 
-Selbstreflexion auf Individualebene
-- Was kann ich besonders gut? (im Vergleich mit anderen)
-    • Details erkennen (zb falsche URL)
-    • Kreative Lösungen mit vorhandenen Mitteln
+## Irgendwas anders machen?
+Idee mit Geschwindigkeit hinschreiben und dann quasi Argumente dagegen 😊
+- weniger Wert auf guten Code, mehr auf Geschwindigkeit? Weil: Firma jetzt pleite! Langfristig schneller durch guten Code jetzt irrelevant. ABER: Konnte man da nicht wissen -> nächstes Mal vielleicht anderen Fokus legen…? Entspricht aber nicht unbedingt eigenen Werten, deshalb wenn dann Fokus nur in Absprache mit Firma/Vorgesetzten verschieben (SOLL es später wiederverwendbar/anpassbar bleiben?) 
+Also eigentlich nö. Weil konnte man nicht wissen. Und so mehr bei gelernt! Also gerade für als Praktikum richtig so gewesen.
 
-- Wo sind meine Grenzen/Schwächen?
-    • Soziales
-    • Sehr korrekter Umgang mit den Bibliotheken
-    • Sebstsicherheit meinem Code gegenüber
-    • Wissen was ich wann nachfragen soll
-    • Abschätzen von Arbeitsaufwänden
+### Höhepunkte
+- die Leute (unternehmerische Meschen): neue Erfahrung in der Einstellung, Lebensstil, Verhalten im Team (Reflexion dazu: dass viel Kommunikation möglich, war gut (übers Projekt, aber auch persönlich); Arbeit in so einem „engen“ Team war neue Erfahrung, gerne wieder)
 
-- Wie werde ich von anderen eingeschätzt? Wie nehmen mich andere wahr?
-    • Kompetent und immer eine Lösung findend (verzeifelt an Konz.var, Tobias Gespräch)
-    • Grundsätzlich zurückhaltend
+### Am meisten stolz/ auch Höhepunkt: 
+- automatische Fehlererkennung, dass nicht nur abstürzt oder so, sondern stattdessen automatische Nachricht. Einmal die Nachricht über ne fehlgeschlagene EBstellung, bei der Paypal kaputt war -> in wenigen Minuten behoben und ohne Kundenkontakt rechtzeitig für 3. Versuch des Kunden gelöst! 
+Hier kam Aufräumen -> Anpassung mit besserer Geschwindigkeit mit Fehlererkennung zusammen -> Hat alles geklappt! Hatte Sinn
 
-- Stimmen Selbst- und Fremdeinschätzung überein? Wenn nicht, was bedeutet das für mich?
-    • Relativ negatives Selbstbild
-    • Kann mehr an meine eigenen Kompetenzen glauben und so mit der Zeit mehr Selbstbewusstsein aufbauen
+### Was kann ich besonders gut im Vergleich?
+selbstständig arbeiten (Aufgaben selbst suchen bei nur sehr losen Erwartungen)
+Sich Sachen selbst ergooglen (eigenständig Lösungen für Probleme finden, ohne Anleitung) Problemlöse-Kompetenz
+viele Möglichkeiten mit den automatischen Sachen und so waren dem Team nicht bekannt, aber Dir schon -> durchs Erklären hat sich das alles gefestigt
 
-### Was habe ich persönlich innerhalb des Projektes gelernt? 
+### Schwächen/ Grenzen?
+- oft selbst überschätzt (zeitlich) realistische Zeitplanung
+passiert, weil: unvorhersehbar (bei Einschätzung denkt man immer, dass alles klappen wird) -> lernen, einen realistischen Zeitpuffer einzuplanen
+- Soziales schwierig: v.a. anfangs, wenn Leute noch nicht so gut einschätzbar. z.B: Chef: bei Entscheidungen (wo Login-Knopf hinmachen) erstmal lieber nicht mit ihm geredet (weil nicht gewusst, wie kommunizieren); irgendwann dann doch diskutiert, Meinungen auseinander -> keine Freunde gemacht, weil sehr vehement auf eigener Meinung beharrt -> erst irgendwann klein bei gegeben
+Reflexion: schon VOR/ WÄHREND des Gesprächs eine Sekunde nehmen und nachdenken: So wichtig, jetzt zu diskutieren (Sinn hinterfragen)? Nicht doch möglich, einfach nachzugeben? Vllt auch vorher Argumente sammeln, um vorbereitet reinzugehen.
+! auch schon angefangen, das so umzusetzen!
+
+## Neu gelernt: 
+- Manche Diskussionen nicht anzetteln, sondern die Aufgaben einfach erledigen, wie es einem gesagt wurde (sozialer Bereich)
+
+### Von andern eingeschätzt: s. Brief vom Chef
+Vergleich s. Stärken und Schwächen von oben im Vergleich zum Chef-Brief
+
+
+
+### Aufgaben waren sehr eigenverantwortlich gesucht, hat Dir aber gelegen 😊 -> gute Passung: Freiheit vom Team aus, dass Eigenverantwortung möglich 
+Alle Ziele erreicht, also erfolgreiches Praktikum. 
+Jetzt Arbeitsstelle bei was, was damit zusammenhängt -> Coole Möglichkeit
