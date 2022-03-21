@@ -155,9 +155,10 @@ selbstständig arbeiten (Aufgaben selbst suchen bei nur sehr losen Erwartungen)
 Sich Sachen selbst ergooglen (eigenständig Lösungen für Probleme finden, ohne Anleitung) Problemlöse-Kompetenz
 viele Möglichkeiten mit den automatischen Sachen und so waren dem Team nicht bekannt, aber Dir schon -> durchs Erklären hat sich das alles gefestigt
 
-### Schwächen/ Grenzen?
-- oft selbst überschätzt (zeitlich) realistische Zeitplanung
-passiert, weil: unvorhersehbar (bei Einschätzung denkt man immer, dass alles klappen wird) -> lernen, einen realistischen Zeitpuffer einzuplanen
+### Was halt ich für meine Schwächen und Grenzen?
+#### Zeitplanung
+Ich habe bei getpacked gelernt, dass ich mir relativ schwer damit tue realistisch einzuschätzen, wie lange ich für Dinge brauchen werde. Es ist mir relativ häufig passiert, dass ich Aufgaben gnadenlos unterschätzt habe, und sie in Realität deutlich länger gedauert haben. Ich fühle mich dann oft schlecht, wenn irgendwie alles hinter dem Zeitplan liegt. Ich glaube das das Hauptproblem ist, dass ich bei der Einschätzung von Zeiten meistens davon ausgehe, dass alles direkt gut funktioniert, aber dann bei der Durchführung dann oft unvorhergesehene Hindernisse auftauchen. In Zunkunft werde ich versuchen prinzipiell Aufgaben mit einem großzügigen Zeitpuffer zu planen, wenn es schneller geht ist, ist es dann eine positive Erfahrung und wenn nicht ist es auch ok.
+
 - Soziales schwierig: v.a. anfangs, wenn Leute noch nicht so gut einschätzbar. z.B: Chef: bei Entscheidungen (wo Login-Knopf hinmachen) erstmal lieber nicht mit ihm geredet (weil nicht gewusst, wie kommunizieren); irgendwann dann doch diskutiert, Meinungen auseinander -> keine Freunde gemacht, weil sehr vehement auf eigener Meinung beharrt -> erst irgendwann klein bei gegeben
 Reflexion: schon VOR/ WÄHREND des Gesprächs eine Sekunde nehmen und nachdenken: So wichtig, jetzt zu diskutieren (Sinn hinterfragen)? Nicht doch möglich, einfach nachzugeben? Vllt auch vorher Argumente sammeln, um vorbereitet reinzugehen.
 ! auch schon angefangen, das so umzusetzen!
