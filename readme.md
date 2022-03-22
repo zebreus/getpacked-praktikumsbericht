@@ -114,7 +114,7 @@ Reflexion
 ---------
 
 ### Welche Ziele habe ich mir im praktium gesetzt
-Im Praktikum hatte ich mehrere Ziele und Aufgaben, vor allem wollte ich die Codebase und alles drumherum aufräumen und strukturieren, und dafür sorgen dass sie auch sauber bleibt. Ein weiteres Aufgabe war es eine Such und Übersichtsseite für alle Betriebe in getpacked zu erstellen. Ausserdem hab ich mir selbst das Ziel gesetzt, nachhaltig zu lernen, wie man möglichst effektiv moderne Webanwendungen baut und wollte dazu möglichst viele Werkzeuge ausprobieren.
+Im Praktikum hatte ich mehrere Ziele und Aufgaben, vor allem wollte ich die Codebase und alles drumherum aufräumen und strukturieren, und dafür sorgen dass sie auch sauber bleibt. Ein weiteres Aufgabe war es eine Such und Übersichtsseite für alle Betriebe in getpacked zu erstellen. Ausserdem hab ich mir selbst das Ziel gesetzt, nachhaltig zu lernen, wie man möglichst effektiv moderne Webanwendungen baut. Dazu wollte ich mir anschauen, was es aktuell für Werkzeuge gibt, um effektiver programmieren zu können.
 
 ### Ziele erfüllt:
 #### Aufräumen und strukturieren
@@ -125,16 +125,16 @@ Ich glaube ich konnte während meiner Zeit bei getpacked die Lesbarkeit und Wart
 #### Lernen von Webentwicklung
 Webentwicklung mit React ist jetzt auch eine der Sachen die ich kann. Was mich überrascht hat, war es zu sehen, wie einfach man mit moderenen Frameworks/Tools komplexe UIs strukturien kann. Vorher hatte ich hauptsächlich mit Qt gearbeitet, dabei kam mir das erstellen von UIs immer unnötig aufwändig vor, ich hatte aber akzeptiert, dass es wahrscheinlich nicht viel einfacher geht. Ausserdem kann ich jetzt JavaScript, was auch nützlich ist.
 
-#### Was hab ich sonst noch gelernt oder ausprobiert
-- webbasierte entwicklung (gitpod)
-- ai autocomplete (tabnine & copilot)
-- ttd
-- gitlab ci
-- no code api glue tools ???  (integromat, n8n)
-- überhaupt Dinge möglichst simpel modellieren
+#### Werkzeuge ausprobieen
+Während dem Praktikum konnte ich viele Werkzeuge ausprobieren. Teilweise kannte ich einige davon schon vorher und hatte nur noch keine Chance sie in der Praxis zu verwenden. Andere haben aber auch erst während der Praxisphase durch meine Kollegen meine Aufmerksamkeit gewonnen.
+Von Anfang wollte ich KI basierte automatische Vervollständigung  verwenden. Anfangs habe ich dazu tabnine benutzt, dann hatte ich die Möglichkeit GitHub Copilot einzusetzen und bin dann auch dabei geblieben, weil Copilot deutlich besser Vorschläge macht.
+Mit GitLab CI wollte ich auch ein weiteres CI tool kennenlernen und das hat auch funktioniert.
+Ein weiteres Werkzeug das ich zu schätzen gelernt habe, war der nix package manager, mit dem es ziemlich einfach möglich ist auf allen Computern in der selben Umgebung zu entwicklen. Wir hatten anfangs ab und an Probleme damit, dass jeder andere Versionen von verschiedenen Programmen installiert hatte. Mit nix konnten wir das nachhaltig lösen.
+Ein weiteres Werkzeug, das ich während meiner Zeit in der Praxisphase kennengelernt habe, war gitpod. Dabei handelt es sich im Grunde um eine IDE die komplett im Browser läuft. Vorallem bei Codereviews hat das den Prozess enorm beschleunigt, da man mit einem Klick auf dem Pullrequest direkt eine IDE mit den zu reviewenden Änderungen hat.
+Auch etwas, dass ich vor der Praxisphase überhaupt nicht auf dem Schirm hatte waren workflow automation Tools, bei denen man verschiedene APIs relativ unkompliziert grafisch ansteuern kann.
 
 ### Herausforderungen
-
+Die wohl grä
 - anfangs Diskussionen über Geschäftsmodell, aber irgendwann ignoriert, weil nicht im Aufgabenbereich 
 - Web-Entwicklung, weil noch nie vorher gemacht; aber gut geklappt, weil Programmieren an sich schon bekannt + Google -> hat gereicht; selbst aufs Projekt bezogen beigebracht -> Projekt bzw Praktikum in dem Bereich hat geholfen, dass Web-Entwicklung jetzt deutlich routinierter und kompetenter (alle Möglichkeiten bekannt) ablaufen würde; 
 
