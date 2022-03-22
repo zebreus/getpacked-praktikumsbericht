@@ -133,7 +133,8 @@ Webentwicklung mit React ist jetzt auch eine der Sachen die ich kann. Was mich �
 - no code api glue tools ???  (integromat, n8n)
 - überhaupt Dinge möglichst simpel modellieren
 
-### Herausforderungen:
+### Herausforderungen
+
 - anfangs Diskussionen über Geschäftsmodell, aber irgendwann ignoriert, weil nicht im Aufgabenbereich 
 - Web-Entwicklung, weil noch nie vorher gemacht; aber gut geklappt, weil Programmieren an sich schon bekannt + Google -> hat gereicht; selbst aufs Projekt bezogen beigebracht -> Projekt bzw Praktikum in dem Bereich hat geholfen, dass Web-Entwicklung jetzt deutlich routinierter und kompetenter (alle Möglichkeiten bekannt) ablaufen würde; 
 
@@ -155,13 +156,15 @@ selbstständig arbeiten (Aufgaben selbst suchen bei nur sehr losen Erwartungen)
 Sich Sachen selbst ergooglen (eigenständig Lösungen für Probleme finden, ohne Anleitung) Problemlöse-Kompetenz
 viele Möglichkeiten mit den automatischen Sachen und so waren dem Team nicht bekannt, aber Dir schon -> durchs Erklären hat sich das alles gefestigt
 
-### Was halt ich für meine Schwächen und Grenzen?
+### Was halte ich für meine Schwächen und Grenzen?
 #### Zeitplanung
 Ich habe bei getpacked gelernt, dass ich mir relativ schwer damit tue realistisch einzuschätzen, wie lange ich für Dinge brauchen werde. Es ist mir relativ häufig passiert, dass ich Aufgaben gnadenlos unterschätzt habe, und sie in Realität deutlich länger gedauert haben. Ich fühle mich dann oft schlecht, wenn irgendwie alles hinter dem Zeitplan liegt. Ich glaube das das Hauptproblem ist, dass ich bei der Einschätzung von Zeiten meistens davon ausgehe, dass alles direkt gut funktioniert, aber dann bei der Durchführung dann oft unvorhergesehene Hindernisse auftauchen. In Zunkunft werde ich versuchen prinzipiell Aufgaben mit einem großzügigen Zeitpuffer zu planen, wenn es schneller geht ist, ist es dann eine positive Erfahrung und wenn nicht ist es auch ok.
+#### Ich tendiere dazu mich in subjektiven Diskussionen festzufahren
+Es ist mir besonders gegen Anfang oft passiert, dass ich mich dazu verleiten lassen übermässig viel Zeit und Energie in eigentlich relativ sinnlose Diskussionen zu stecken. Eins der extremsten Beispiel war die Diskussion darüber, wie der Knopf zum anmelden mit Email und Password im Kontrast zur den Knöpfen zur Anmeldung mit third-party Authentication Providern dargestellt werden soll, sodass möglichst wenige Nutzer eine Anmeldung mit Email und Passwort wählen. In den Gesprächen hatte niemand Daten darüber wie sich die Gestaltung des Knopfes tatsächliche auf das Anmeldeverhältnis auswirkt. Alle waren sich auch einig, dass es wahrscheinlcih keinen großen Unterschied macht, welche der beiden trivialen Lösungen wir wählen. Realistisch gesehen haben wir zwei Stunden ohne Grundlage über ein sinnloses Thema diskutiert. Inzwischen akzeptiere ich bei solchen Diskussionen einfach irgendeine Lösung, da sie zu dem Zeitpunkt gleichwertig sind. Wenn sich dann herausstellt, dass die Wahl falsch war, kann man immernoch mehr Daten darüber sammeln und dann später nochmal beide Ansätze sinnvoll vergleichen. Im Praktikum habe ich gelernt, zu erkennen, wenn ich mich in so einer Situation befinde und diese dann zu verlassen.
 
-- Soziales schwierig: v.a. anfangs, wenn Leute noch nicht so gut einschätzbar. z.B: Chef: bei Entscheidungen (wo Login-Knopf hinmachen) erstmal lieber nicht mit ihm geredet (weil nicht gewusst, wie kommunizieren); irgendwann dann doch diskutiert, Meinungen auseinander -> keine Freunde gemacht, weil sehr vehement auf eigener Meinung beharrt -> erst irgendwann klein bei gegeben
-Reflexion: schon VOR/ WÄHREND des Gesprächs eine Sekunde nehmen und nachdenken: So wichtig, jetzt zu diskutieren (Sinn hinterfragen)? Nicht doch möglich, einfach nachzugeben? Vllt auch vorher Argumente sammeln, um vorbereitet reinzugehen.
-! auch schon angefangen, das so umzusetzen!
+#### Reden mit Leuten die ich nicht gut einschätzen kann
+Wenn ich mit Leuten reden muss, die ich nicht gut einschätzen kann, fühle ich mich meistens sehr unwohl unsicher. Weil ich nicht genau weiss wie ich mich verhalten soll um nicht zu seltsam zu wirken. Macht aber auch irgendwie spaß. 
+TODO: besser formulieren.
 
 ## Neu gelernt: 
 - Manche Diskussionen nicht anzetteln, sondern die Aufgaben einfach erledigen, wie es einem gesagt wurde (sozialer Bereich)
@@ -170,7 +173,8 @@ Reflexion: schon VOR/ WÄHREND des Gesprächs eine Sekunde nehmen und nachdenken
 Vergleich s. Stärken und Schwächen von oben im Vergleich zum Chef-Brief
 
 
+### Fazit
 
-### Aufgaben waren sehr eigenverantwortlich gesucht, hat Dir aber gelegen 😊 -> gute Passung: Freiheit vom Team aus, dass Eigenverantwortung möglich 
+#### Aufgaben waren sehr eigenverantwortlich gesucht, hat Dir aber gelegen 😊 -> gute Passung: Freiheit vom Team aus, dass Eigenverantwortung möglich 
 Alle Ziele erreicht, also erfolgreiches Praktikum. 
 Jetzt Arbeitsstelle bei was, was damit zusammenhängt -> Coole Möglichkeit
