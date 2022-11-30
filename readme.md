@@ -137,12 +137,9 @@ Sehr viel von dem was ich für die Entwicklungsinfrastruktur getan habe, spiegel
 
 Für mich war das ein Höhepunkt, weil wir ohne das was ich gemacht habe, den Fehler weder so schnell gefunden, noch so schnell behoben hätten.
 
-### Was kann ich besonders gut im Vergleich?
-#### Selbstständig sinnvolle aufgaben suchen
-TODO
-selbstständig arbeiten (Aufgaben selbst suchen bei nur sehr losen Erwartungen)
-Sich Sachen selbst ergooglen (eigenständig Lösungen für Probleme finden, ohne Anleitung) Problemlöse-Kompetenz
-viele Möglichkeiten mit den automatischen Sachen und so waren dem Team nicht bekannt, aber Dir schon -> durchs Erklären hat sich das alles gefestigt
+### Was halte ich für meine Stärken?
+#### Selbstständig arbeiten bei nur sehr losen Erwartungen
+Problemlösung fällt mir leicht. Wenn ich irgendwas mache denke ich dabei meistens auch darüber nach wie man es anderes machen könnte und was für Vor- und Nachteile daraus entstehen. Außerdem hab ich dann auch relativ wenig Hemmung einzugestehen, dass der Weg den ich zuerst gewählt habe nicht der richtige ist und nochmal von Vorne anzufangen. Dadurch glaube ich bei den meisten Problemen immer einen guten Überblick über die möglichen Lösungswege zu haben und zumindest nicht den schlechtesten auszuwählen.
 
 ### Was halte ich für meine Schwächen und Grenzen?
 #### Zeitplanung
@@ -155,7 +152,7 @@ Es ist mir besonders gegen Anfang oft passiert, dass ich mich dazu verleiten las
 Wenn ich mit Leuten reden muss, die ich nicht gut einschätzen kann, fühle ich mich meistens sehr unsicher. Weil ich nicht genau weiß wie ich mich verhalten soll um nicht zu seltsam zu wirken. Das scheint allerdings größtenteils ein Problem zu sein, das nur in meinem Kopf stattfindet, da ich nie das Feedback bekommen habe, dass ich da tatsächlich seltsam gewirkt habe. Nachdem ich ein paar mal mit jemandem Kontakt hatte legt sich das aber in der Regel und ich fühle mich sicherer. Auch wenn ich mir solche Situationen unangenehm sind, habe ich festgestellt, dass es mir auch irgendwie Spaß macht in solchen Situationen zu sein.
 
 ## Learnings
-Neben den technisches Skills habe ich auf sozialer Ebene gelernt mir keine neuen Aufgaben zu nehmen, wenn ich sowieso schon genug zu tun habe.
+Neben den technisches Skills habe ich auf sozialer Ebene gelernt mir keine neuen Aufgaben zu nehmen, wenn ich sowieso schon genug zu tun habe. 
 
 ### Von andern eingeschätzt: s. Brief vom Chef
 TODO: Maybe remove
