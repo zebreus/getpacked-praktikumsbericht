@@ -13,25 +13,25 @@ Ich habe mich am Ende für getpacked entschieden, weil ich bei ihnen den Eindruc
 
 Meine Projekte während der Praxisphase waren hauptsächlich im Softwarengineering Bereich angesiedelt.
 
-Faktenreiche Kurzcharakteristik des Praktikums und der Institution
+Faktenreiche Kurzcharakteristik von getpacked
 ------------------------------------------------------------------
-### Über getpacked
 getpacked ist ein Startup das eine Software as a service Lösung für online Bestellungen anbietet. Der Fokus liegt dabei mehr auf Vorbestellungen zur Abholung, Bestellungen mit Lieferung sind allerdings auch möglich. Die Zielgruppe sind hauptsächlich Hofläden, aber auch Gastronomie, Bäckereien und Metzgereien. Vor allem in den Hofläden, Bäckereien und Metzgereien ist es bisher unüblich gewesen, online Vorbestellungen anzubieten. Gerade bei diesen Läden ist es aber ein klarer Vorteil Vorbestellungen anzubieten, da es hier Stoßzeiten gibt, zu denen deutlich mehr Kunden kommen, als am Rest des Tages. Wenn ein Teil der Kunden allerdings Vorbestellungen aufgibt, können diese im Vorraus gepackt und bezahlt werden und die Kunden müssen ihre Bestellung nur noch abholen.
 
-Im Frühjahr 2021 wurde die getpacked GmbH offiziell gegründet, vorher war getpacked ein Teil der 360VIER GmbH. Aktuell hat das Unternehmen 8 Mitarbeiter, von denen 3 in der Entwicklung arbeiten. Die Firma hat rund 100 Kunden die mit getpacked erfolgreich ihre Produkte anbieten. 
+Im Frühjahr 2021 wurde die getpacked GmbH offiziell gegründet, vorher war getpacked ein Teil der 360VIER GmbH. Aktuell hat das Unternehmen 8 Mitarbeiter, von denen 3 in der Entwicklung arbeiten. Die Firma hat rund 100 Kunden die mit getpacked erfolgreich ihre Produkte anbieten.
 
-### Aufgaben im Praktikum
-Meine Aufgaben in der Praxisphase waren hauptsächlich die Aufbereitung des Programmcodes und der Entwicklungsinfrastruktur, aber auch viele andere Dinge.
+Meine Aufgaben im Praktikum
+---------------------------
+Ich habe mir meine Aufgaben im Praktikum größtenteils selbstständig gesucht. Neben der Weiterentwicklung von getpacked lag mein Fokus darauf die Softwareengineering Prozesse im Unternehmen zu verbessern.
 
-#### Einführung einer Continuous Integration/ Continuous Delivery Infrastruktur
+### Einführung einer Continuous Integration/Continuous Delivery Infrastruktur
 Mein erstes Projekt bei getpacked war es eine CI/CD pipeline aufzusetzen und einzuführen. Wir haben uns dabei für GitLab CI entschieden, da wir GitLab sowieso schon als Softwareentwicklungsplattform eingesetzt haben und wir unseren Technologiestack nicht komplizierter machen wollten, als nötig. Da ich vorher schon relativ viel Erfahrung mit verschiedenen CI Programmen gesammelt hatte, ging das aufsetzen von GitLab CI relativ schnell. Was länger gedauert hatte war, die Geschwindigkeit der Builds zu erhöhen. Da unser Projekt circa 500MB an Abhänigkeiten hat, war es keine angebrachte Lösung diese bei jedem Build erneut herunterzuladen. Die in GitLab CI integrierten Funktionen zum speichern von Artefakten waren bei der Menge auch zu langsam um sinnvoll eingesetzt werden zu können. Die Lösung für das Probblem war es dann bei jeder Änderung der Dependencies einen neuen Container mit allen Dependencies zu erstellen und den für diesen und alle zunkünftigen Builds zu benutzen.
 
 Dadurch konnten wir die Deploymentfrequenz von ~3mal pro Woche auf ~4mal pro Tag erhöhen.
 
-#### Sicherstellung einer hohen Codequalität
+### Sicherstellung einer hohen Codequalität
 Eine Aufgabe die durchgehend an der ich durchgehend beschäftigt war, war die Verbesserung der Codequalität. Die Entwicklung bei getpacked wurde oft durch Bugs ausgebremst, die durch klareren Code vermeidbar gewesen wären. Oft war es allein durch die Betrachtung ihrer Schnittstelle unklar, wie Komponenten verwendet werden, damit sie das tun was man erwartet. Der Code in den Komponenten war allerdings auch oft zu komplex, um schnell zu verstehen, wie sie verwendet werden. Außerdem war die Formatierung des Quelltexts inkonsistent, und der Zustand der Anwendung war nicht immer klar. Einige Massnahmen zur Sicherstellung einer der Codequalität wurden mir anfangs aufgetragen, andere habe ich selbst erarbeitet.
 
-#### Erarbeiten von Guidelines zur Verbesserung der Wartbarkeit
+### Erarbeiten von Guidelines zur Verbesserung der Wartbarkeit
 Um die Codequalität auch langfristig hoch zu halten habe ich Guidelines zur Verbesserung der Wartbarkeit erarbeitet.
 
 Die Guidelines sind zum einen Regeln für linter, formatter oder ähnlichen Programmen die diese automatisiert durchsetzen können. In diese Kategorie fallen vor allem
@@ -49,25 +49,23 @@ Neben den Dingen die man überprüfen kann gibt es noch einige Faktoren in den C
 - Dinge richtig zu bennenen ist die halbe Miete
 - Guard clauses sind die bevorzugte Art von Verzweigungen
 
-#### Umstellen der Codebase auf striktes TypeScript
+### Umstellen der Codebase auf striktes TypeScript
 Eine meiner ersten Aufgaben war es die Codebase der Webanwendung für eine Umstellung von JavaScript auf TypeScript vorzubereiten. Das Team hatte vorher schon angefangen TypeScript im Serverseitigem Code zu verwenden. Dort wurden aber die meisten Funktionen zur starken Überprüfung der Typen abgestellt, um die Entwicklungsgeschwindigkeit zu erhöhen, wodurch allerdings auch keine der Vorteile von Typescript genutzt wurden.
 
-##### Was ist TypeScript und wie wollen wir es nutzen
 Die Grundidee hinter TypeScript ist, das es normales Javascript mit zusätzlichen Typinformationen ist, die beim kompiliern erst zur Überprüfung der Korrektheit benutzt und dann komplett entfernt werden. Übrig bleibt normales JavaScript. Als Folge dessen hat TypeScript die Eigenschaft, dass es beim kompilieren komplett statisch getyped ist, bei der Ausführung aber dynamisch. Man kann deshalb in Typescript den Typ einer Variable auch als `any` angeben und damit komplett auf Überprüfung der Korrektheit in der Verwendung dieser Variable verzichten. Das führt allerdings zu weniger Klarheit darüber, welche Werte Variablen annehmen können. Damit gibt TypeScript die Entscheidung, wie stark Typen überprüft werden sollen an die Entwickler.
 
 Die erste Teilaufgabe der Umstellen der Codebase auf TypeScript war es also das zu entscheiden. Dazu habe ich mit allen Teammitgliedern gesprochen um zu verstehen, wie sie dazu stehen. Die Grundhaltung war etwas Angst, dass durch TypeScript die allgemeine Produktivität sinkt, da man sich mehr Gedanken darüber machen muss, wie die Schnittstellen von Komponenten aussehen und wie man diese in TypeScript definiert. Allerdings sind genau das auch die Gründe, weshalb wir zu TypeScript wechseln wollten. Klar definierte und gut durchdachte Komponenten sind wesentlich einfacher zu verwenden und wartbarer. Deshalb haben wir uns dazu entschieden TypeScript so strikt wie möglich einzustellen.
 
-##### Und was habe ich dafür gemacht
 Die zwei grössten Herausforderungen bei der Umstellung auf Typescript waren zum einen herauszufinden was die Typen in existierendem Code sind und sicherzustellen das auch aller zukünftige Quelltext mit sinnvollen und korrekten Typen versehen ist. 
 
 Beim Herausfinden und Definieren von Typen in existierendem Code habe ich hauptsächlich darauf gesetzt Annahmen über die Typen von Dingen aufzustellen und diese bei Unklarheit dann im Debugger zu verifizieren. Die Annahmen habe ich entweder durch Gespräche mit den anderen Teammitgliedern oder durch den Kontext des Codes versucht aufzustellen. Meistens war es nicht nötig die Annahmen durch Tests zu überprüfen, da wenn alle Orte an denen ein Komponent verwendet wird mit Typen versehen sind, sich der Compiler beschwert, wenn etwas nicht passt.
 
 Nachdem die Kernkomponenten der Codebase mit Typen versehen waren, habe ich sichergestellt, dass auch aller neuer Code in striktem TypeScript geschrieben wird und  das der Rest der Codebase im Laufe der Zeit zu TypeScript wird. Dazu habe ich unter anderem Linterregeln eingeführt, die weder die explizite, noch die implizite Verwendung von `any` zu erlauben. Ich mit dem Team einen kurzen Crashkurs gemacht, damit alle ein Verständnis dafür haben, wie und warum wir TypeScript einsetzen. Außerdem habe ich dafür gesorgt das Team stetig mit Informationen zum Anteil von TypeScript und JavaScript an der Codebase zu versorgen und es zu feiern, wenn der JavaScript Anteil sinkt.
 
-#### Umstellen auf css auf Komponentenebene
+### Umstellen auf css auf Komponentenebene
 Bei normalen css Stylesheets erstellt man global gültige Klassennamen, die auf alle HTML Elemente einer bestimmten Klasse angewandt werden. In Komponentenbasieren Webanwendungen führt das oft zu Problemen, da wenn mehrere Komponenten den selben Klassennamen verwenden, sie sich dadurch auch oft unbemerkt gegenseitig beinflussen. In getpacked hatten wir zum Beispiel die Klasse `cartButton` die zum einen einen Knopf mit dem Preis des aktuellen Warenkorbs, der diesen auch öffnet gestaltet, zum anderen aber auch den Knopf um ein Produkt in den Warenkorb hinzuzufügen. Da beide Knöpfe relativ ähnlich aussahen, ist nicht aufgefallen, dass beide den die selbe CSS Klasse benutzen, bis wir die Farbe von einem anpassen wollten, was dann aber auch den anderen betroffen hat. Die Lösung war das Problem war es auf css mdoule umzustellen, dabei sind Klassennamen immer an eine Komponente gebunden. Erreicht wird das dadurch, dass die Namen der CSS Klassen im Buildprozess so modifiziert werden, dass sie einzigartig sind. So wird aus dem `cartButton` in der Basket Komponent zum Beispiel `Basket_cartButton_be8j3`.
 
-#### Performance optimierung eine Webanwendung
+### Performance optimierung eine Webanwendung
 Eines meiner Projekte war die Optimierung der Ladezeit der Webseite.
 Da getpacked mit React gebaut ist, wurde komplett auf clientseitiges rendering gesetzt. Da die Unterscheidug zwischen verschiedenen Unterseiten (z.B. der Shop für Kunden oder das Admininterface zur verwaltung der Shops) dabei nur Clientseitig erfolgt wurden auf jedet Seite alle Skripte geladen. Außerdem wird bei clientseitigem rendering erstmal eine leere Webseite qusfeliefert, die dann noch mit Inhalt gefüllt werden muss, was auch etwas Zeit braucht.
 Wir haben verschiedene Lösungen für diese Probleme geprüft und haben uns dann für nextjs entschieden, da es diese beiden Problem relativ automatisch löst. 
@@ -77,7 +75,7 @@ Wir konnten diese Probleme auf nicht durch vorgenerierte nextjs Seiten lösen, d
 Dadurch sind die vorgenerierten Seiten in allen Fällen in den sich die Daten in der zwischenzeit nicht verändert haben identisch zu den clienseitig gerenderten Seiten. Damit kann die Webseite schon benutzt werden, sobald sie geladen hat.
 Die Ladezeit für eine durchschnittliche Shopseite ist von ~6 Sekunden auf ~0.7 Sekunden gesunken.
 
-#### Wechsel des JavaScript Frameworks
+### Wechsel des JavaScript Frameworks
 Wenn eine Sache stereotypisch für die Entwicklung von Webanwendungen ist, so ist das die große Zahl verschiedener JavaScript Frameworks und das es immer ein neues cooleres Framework gibt. Zu Beginn meiner Praxisphase wurde die Anwendung mit React entwickelt. Mit React wird komplett auf clientseitiges rendering gesetzt, der Webserver gibt also jedem Besucher der Webseite die komplette javascript Anwendung, die dann im Webbrowser die Seite aufbaut. Da das aber in unserem Fall zu teilweise sehr langen Ladezeiten geführt hat, da die Bestellseite für Kunden und die Adminseite für Ladenbesitzer immer zusammen geladen werden mussten. Außerdem wirkt sich clientseitiges rendering in der Regel auch negativ auf die Platzierung in den Ergebnissen von Suchmaschinen aus. Einen meiner Aufgaben war es nun eine Lösung für dieses Problem zu finden und umzusetzen. Ein weiteres Kriterium war es, das die  die Umstellung mit möglichst wenig Aufwand verbunden sein sollte. Die Entscheidung fiel auf Next, da es sich dabei im Grunde nur um eine Erweiterung von React mit auftrennung in verschiedene Seiten und serverseitigem rendering handelt. Es gibt bei Next für jede Unterseite der Webanwendung eine eigene React Anwendung, allerdings optimiert Next die Übergänge zwischen verschiedenen Unterseiten, sodass diese ohne eine neuladen der Seite clientseitig passieren können. Außerdem wird bei Next jede Unterseite serverseitig einmal vorgerendert und das hierbei erzeugt HTML wird mit der Seite an den Webbrowser geschickt und dient als eine Art Platzhalter, bis das clientseitige rendering abgeschlossen ist.
 
 Die Umstellung der Anwendung auf Next hat etwa einen Monat gedauert, da mit ihr auch eine Umstellung von JavaScript auf TypeScript verbunden war. Da viele Teile das Codes angepasst werden mussten, haben wir beschlossen, dass es einfacher ist alles dabei auf Typescript umzustellen, da man dabei auch die Schnittstellen von Komponenten klar definieren muss. Vorher war es ein Problem, dass oft unklar war was es bewirkt, wenn man eine Eigenschaft auf einem Komponenten setzt und ob die überhaupt verwendet wird. Zum Beispiel gab es viele Situationen in denen Komponenten Eigenschaften mitgegeben wurden, die es inzwischen garnicht mehr gibt.
@@ -88,7 +86,7 @@ Der Großteil der Arbeit der Umstellung auf nextjs war es sicherzustellen, das j
 
 NextJS hat integrierte Lösungen für einige Probleme für die wir vorher andere Libraries verwendet haben. Zum Beispiel kann NextJS Bilder selbst serverseitig skalieren und dadurch Bilder nur in der benötigten Größe auslieferen. Damit das funktioniert musste ich alle Bilder auf die NextJS Image Komponente umstellen.
 
-#### Gitlab CI pipeline optimieren
+### Gitlab CI pipeline optimieren
 Am Anfang meines Praktikum hatte ich Gitlab CI aufgesetzt. Die CI war so konfiguriert, dass jeder Branch der auf den `main` Branch gemerged werden soll erst die CI tests erfolgreich durchlaufen muss. Mit der Zeit hat sich allerdings herausgestellt, dass das unsere Entwicklungsgeschwindigkeit ein wenig ausbremst. Wenn man erst 10 Minuten warten muss, bis die Pipeline durchgelaufen ist. Meine Aufgabe war es dann auszuwerten, warum die Pipelines so lange brauchen. Der Hauptgrund war, dass die von Gitlab gehosteten Jobrunner den Dockercontainer in dem die Tests ausgeführt wurden für jeden Schritt immer wieder neu herunterladen mussten, da für jeden Schritt ein anderer Runner verwended wird.
 
 Die Lösung für das Problem ist es in der Regel eigene Runner zu hosten, die die Dockerimages lokal vorhalten, sobald sie einmal heruntergeladen wurden. Eigene Runner auf Servern zu hosten kam für uns allerdings nicht in Frage, da schnelle Server doch relativ teuer sind. Gitlab bietet zwar die Möglichkeit ein Kubernetes Cluster anzubinden und darauf dann bei Bedarf Runner zu erschaffen. Der administrativa Aufwand wäre allerdings ziemlich hoch gewesen und es hätte unsere Probleme auch nicht komplett gelöst, da Kubernetes auch immer mindestens einen aktiven Server braucht, der Kosten verursacht.
@@ -97,7 +95,7 @@ Als nächstes hatte ich versucht, ob es sinnvoll möglich ist, die Runner lokal 
 
 Dadurch haben wir Runner auf Computern mit Desktop CPUs, die für unsere hauptsächlich nicht parallel ausgeführten Jobs ein ganzes Stück schneller sind als Server CPUs. Der einzige Nachteil ist, dass Jobs manchmal fehlschlagen können, weil ein Entwickler seinen Computer ausschaltet während der Job dort ausgeführt wird. In der Praxis ist das aber nur knapp ein mal pro Monat passiert. Mit dieser Lösung konnte ich ohne mehrkosten zu verursachen die Dauer unserer Pipelines von 7-10 auf 1-4 Minuten zu reduzieren (je nachdem ob noch Container geladen werden müssen und wie viele Runner online sind). 
 
-#### Andere Aufgaben
+### Andere Aufgaben
 Außerdem habe ich während meiner Zeit bei getpacked noch ein paar andere Dinge getan:
 - Automatisieren von vercel deploys
 - Aufsetzen von firestore emulatoren
@@ -106,11 +104,10 @@ Außerdem habe ich während meiner Zeit bei getpacked noch ein paar andere Dinge
 
 Reflexion
 ---------
-
 ### Welche Ziele habe ich mir im praktium gesetzt
 Im Praktikum hatte ich mehrere Ziele und Aufgaben, vor allem wollte ich die Codebase und alles drumherum aufräumen und strukturieren, und dafür sorgen dass sie auch sauber bleibt. Ein weiteres Aufgabe war es eine Such und Übersichtsseite für alle Betriebe in getpacked zu erstellen. Außerdem hab ich mir selbst das Ziel gesetzt, nachhaltig zu lernen, wie man möglichst effektiv moderne Webanwendungen baut. Dazu wollte ich mir anschauen, was es aktuell für Werkzeuge gibt, um effektiver programmieren zu können.
 
-### Ziele erfüllt:
+### Welche Ziele habe ich erfüllt
 #### Aufräumen und strukturieren
 Ich konnte während meiner Zeit bei getpacked die Lesbarkeit und Wartbarkeit des Programms deutlich verbessern. Was ich in der Zeit besonders geschätzt habe, war das ich relativ viel Zeit in Dinge investieren durfte, die nicht direkt Features für das Produkt bringen, sondern nur langfristig die Geschwindigkeit mit der neue Dinge entwickelt werden können erhöhen. Außerdem fand ich es cool, dass nahezu alle meiner Bestrebungen in die Richtungen auch von meinen Kollegen angenommen wurden. (Nur das entfernen von unbenutzten imports beim speichern ist auf Wiederstand gestoßen).
 
@@ -128,23 +125,23 @@ Außerdem habe ich während meiner Zeit in der Praxisphase angefangen viel mit g
 
 Auch etwas, dass ich vor der Praxisphase überhaupt nicht auf dem Schirm hatte waren nocode workflow automation Programme, bei denen man verschiedene APIs relativ unkompliziert grafisch ansteuern kann. Die sind überraschend praktisch, wenn man einfach nur zwei Dinge schnell verbinden will, aber dafür nicht extra einen Server aufsetzen möchte. Wir konnten es damit zum Beispiel relativ unkompliziert umsetzen, dass bei jeder neuen Bestellung eine Nachricht darüber in einen Slack Channel gesendet wird.
 
-## Learnings
+### Was habe ich sonst noch so gelernt
 Neben den technisches Skills habe ich auf sozialer Ebene gelernt mir keine neuen Aufgaben zu nehmen, wenn ich sowieso schon genug zu tun habe. 
 
 ### Höhepunkte
 #### Arbeiten in einem coolen Team
 An dem Praktikum hat mir besonders gefallen mit Leuten die aus so einer Startup Blase kommen zu arbeiten. Im Vergleich zu meiner vorherigen Arbeitserfahrung waren alle viel motivierter etwas cooles zu bauen und dabei auch noch Spaß zu haben. Außerdem wurde viel Wert auf gute Kommunikation gelegt was mir auch sehr gefallen hat. Wir hatten zum Beispiel immer eine guten Überblick darüber wer gerade was macht und wenn sich herausgestellt hat das jemand anders schon Erfahrung mit einem Thema hatte konnte man das dann einfach schnell zusammen bearbeiten. Was ich auch cool fand war das sich niemand zu fein war um Hilfe zu fragen, so hab ich wahrscheinlich ähnlich viel Hilfe gegeben wie bekommen. Arbeit in so einem offenen Team war für mich eine neue Erfahrung, gerne wieder.
 
-#### Technischer Höhepunkt
+#### Schneller Bugfix
 Sehr viel von dem was ich für die Entwicklungsinfrastruktur getan habe, spiegelt sich für mich in einem Fehler, und der Geschwindigkeit mit der wir darauf reagieren konnten, wieder. Zuerst kam über Sentry eine Fehlermeldung, dass die Seite bei einem Nutzer während des Bestellvorgangs abgestürzt ist. Nachdem ich die Benachrichtigung über den Fehler bekommen habe, konnte ich direkt aus Sentry zur Stelle im Code gehen, wo der Crash passiert ist. Da der Code mit dem Bug noch JavaScript war hab ich den zu TypeScript konvertiert. Dabei hat TypeScript auch direkt den Fehler erkannt, da bei dem Kunden ein Wert `undefined` war, von dem vorher davon ausgegangen wurde, dass er immer eine Zahl ist. Da es an der Stelle eigentlich korrekt war, dass der Wert auch undefiniert sein kann habe ich schnell einen standart Wert für den Fall gesetzt und meine Änderungen gepushed. Die CI hat die Änderungen dann innerhalb von wenigen Minuten direkt deployed. Von der Fehlermeldung bis zum deployten Bugfix sind insgesamt weniger als 5 Minuten vergangen. In der Zwischenzeit hatte der Nutzer einen zweiten Bestellversuch gestartet, der dank des schnellen Bugfixes auch erfolgreich war.
 
 Für mich war das ein Höhepunkt, weil wir ohne das was ich gemacht habe, den Fehler weder so schnell gefunden, noch so schnell behoben hätten.
 
-### Was halte ich für meine Stärken?
+### Was habe ich über meine Stärken gelernt
 #### Selbstständig arbeiten bei nur sehr losen Erwartungen
 Problemlösung fällt mir leicht. Wenn ich irgendwas mache denke ich dabei meistens auch darüber nach wie man es anderes machen könnte und was für Vor- und Nachteile daraus entstehen. Außerdem hab ich dann auch relativ wenig Hemmung einzugestehen, dass der Weg den ich zuerst gewählt habe nicht der richtige ist und nochmal von Vorne anzufangen. Dadurch glaube ich bei den meisten Problemen immer einen guten Überblick über die möglichen Lösungswege zu haben und zumindest nicht den schlechtesten auszuwählen.
 
-### Was halte ich für meine Schwächen und Grenzen?
+### Was habe ich über meine Grenzen gelernt
 #### Zeitplanung
 Ich habe bei getpacked gelernt, dass ich mir relativ schwer damit tue realistisch einzuschätzen, wie lange ich für Dinge brauchen werde. Es ist mir relativ häufig passiert, dass ich Aufgaben gnadenlos unterschätzt habe, und sie in Realität deutlich länger gedauert haben. Ich fühle mich dann oft schlecht, wenn irgendwie alles hinter dem Zeitplan liegt. Ich glaube das das Hauptproblem ist, dass ich bei der Einschätzung von Zeiten meistens davon ausgehe, dass alles direkt gut funktioniert, aber dann bei der Durchführung dann oft unvorhergesehene Hindernisse auftauchen. In Zunkunft werde ich versuchen prinzipiell Aufgaben mit einem großzügigen Zeitpuffer zu planen, wenn es schneller geht ist, ist es dann eine positive Erfahrung und wenn nicht ist es auch ok.
 
@@ -154,8 +151,6 @@ Es ist mir besonders gegen Anfang oft passiert, dass ich mich dazu verleiten las
 #### Reden mit Leuten die ich nicht gut einschätzen kann
 Wenn ich mit Leuten reden muss, die ich nicht gut einschätzen kann, fühle ich mich meistens sehr unsicher. Weil ich nicht genau weiß wie ich mich verhalten soll um nicht zu seltsam zu wirken. Das scheint allerdings größtenteils ein Problem zu sein, das nur in meinem Kopf stattfindet, da ich nie das Feedback bekommen habe, dass ich da tatsächlich seltsam gewirkt habe. Nachdem ich ein paar mal mit jemandem Kontakt hatte legt sich das aber in der Regel und ich fühle mich sicherer. Auch wenn ich mir solche Situationen unangenehm sind, habe ich festgestellt, dass es mir auch irgendwie Spaß macht in solchen Situationen zu sein.
 
-
-
-### Fazit
-
-Ich hatte in der Praxisphase viel Spaß und habe fast alle Ziele erreicht die ich mir gesetzt hatte.
+Fazit
+-----
+Ich hatte in der Praxisphase viel Spaß und habe fast alle Ziele die ich mir gesetzt hatte erreicht.
