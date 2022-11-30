@@ -1,0 +1,9 @@
+---
+tasks:
+  - init: sudo apt install texlive-xetex pandoc --yes
+    command: pandoc readme.md --pdf-engine=xelatex -o praxisbericht.pdf --metadata pagetitle="Praxisbericht"
+
+vscode:
+  extensions:
+    - "streetsidesoftware.code-spell-checker"
+    - "streetsidesoftware.code-spell-checker-german"
