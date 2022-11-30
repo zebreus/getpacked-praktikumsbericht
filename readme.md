@@ -29,41 +29,24 @@ Dadurch konnten wir die Deploymentfrequenz von ~3mal pro Woche auf ~4mal pro Tag
 
 #### Sicherstellung einer hohen Codequalitaet
 Eine Aufgabe die durchgehend an der ich durchgehend beschaeftigt war, war die Verbesserung der Codequalitaet. Die Entwicklung bei getpacked wurde oft durch Bugs ausgebremst, die durch klareren Code vermeidbar gewesen waeren. Oft war es allein durch die Betrachtung ihrer Schnittstelle unklar, wie Komponenten verwendet werden, damit sie das tun was man erwartet. Der Code in den Komponenten war allerdings auch oft zu komplex, um schnell zu verstehen, wie sie verwendet werden. Ausserdem war die Formatierung des Quelltexts inkonsistent, und der Zustand der Anwendung war nicht immer klar. Einige Massnahmen zur Sicherstellung einer der Codequalitaet wurden mir anfangs aufgetragen, andere habe ich selbst erarbeitet.
-##### Erarbeiten von Massnahmen zur Sicherstellung der Codequalitaet
-Hier eine ungeordnete Liste an allen sachen, die ich gemacht habe
-TODO
-Die die eigentliche Logik nicht beeinflussen
-- Typen & Typescript
-- linter regeln definieren, als fehler
-- formatierung automatisieren
-- imports vereinheitlichen
-- Kein globales css
-- Naming conventions fuer dinge
-- precommit hooks & checks in ci
-- Updates von Komponenten vermeiden
-- branchless programming for readability
-- Zum nachdenken ueber code anregen
-- weniger code ist besser
-Die die Logik beinflussen
-- Zustand vereinheitlichen. focus on pure components
-- 
 
-- Code aus Anfangszeiten von getpacked
-Da der Code aus den ersten Monaten von getpacked 
-#### Erarbeiten von Schritten zur Verbesserung 
-TODO
-- Kein globales Styling
-- Nur striktes typescript ohne any
-- Einheitliche code formatierung
-- Naming conventions
 #### Erarbeiten von Guidelines zur Verbesserung der Wartbarkeit
-TODO
--
-##### Warum brauchen wir sowas und was muss da rein.
-TODO
-Guide
+Um die Codequalität auch langfristig hoch zu halten habe ich Guidelines zur Verbesserung der Wartbarkeit erarbeitet.
 
+Die Guidelines sind zum einen Regeln für linter, formatter oder ähnlichen Programmen die diese automatisiert durchsetzen können. In diese Kategorie fallen vor allem
+- Statische analyse mit TypeScript
+- Statische analyse mit eslint
+- Automatische Codeformatierung
+- Automatisches verwalten von imports
+- Globales CSS verbieten
+- Naming conventions für Interfaces und Funktionen
+Diese Regeln werden direkt in vscode, beim Speichern, in Precommit-Hooks, oder in CI jobs durchgesetzt, um die Codequalität sicherzustellen
 
+Neben den Dingen die man überprüfen kann gibt es noch einige Faktoren in den Codingstandarts die nicht automatisch überprüft werden können, da sie mehr die Art betreffen wie man Code schreibt und darüber nachdenkt. Wir fanden es sinnvoll auch dafür Richtlinien festzulegen, damit sich die Codebase auch im Stil einheitlicher anfühlt. In diese Kategorie fallen:
+- Erst denken, dann programmieren
+- Weniger Code meist besser als viel Code ist
+- Dinge richtig zu bennenen ist die halbe Miete
+- Guard clauses sind die bevorzugte Art von Verzweigungen
 
 #### Umstellen der Codebase auf striktes TypeScript
 Eine meiner ersten Aufgaben war es die Codebase der Webanwendung für eine Umstellung von JavaScript auf TypeScript vorzubereiten. Das Team hatte vorher schon angefangen TypeScript im Serverseitigem Code zu verwenden. Dort wurden aber die meisten Funktionen zur starken Überprüfung der Typen abgestellt, um die Entwicklungsgeschwindigkeit zu erhöhen, wodurch allerdings auch keine der Vorteile von Typescript genutzt wurden.
