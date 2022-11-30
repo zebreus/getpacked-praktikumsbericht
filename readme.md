@@ -63,11 +63,6 @@ Beim Herausfinden und Definieren von Typen in existierendem Code habe ich haupts
 
 Nachdem die Kernkomponenten der Codebase mit Typen versehen waren, habe ich sichergestellt, dass auch aller neuer Code in striktem TypeScript geschrieben wird und  das der Rest der Codebase im Laufe der Zeit zu TypeScript wird. Dazu habe ich unter anderem Linterregeln eingefuehrt, die weder die explizite, noch die implizite Verwendung von `any` zu erlauben. Ich mit dem Team einen kurzen Crashkurs gemacht, damit alle ein Verstaendnis dafuer haben, wie und warum wir TypeScript einsetzen. Ausserdem habe ich dafuer gesorgt das Team stetig mit Informationen zum Anteil von TypeScript und JavaScript an der Codebase zu versorgen und es zu feiern, wenn der JavaScript Anteil sinkt.
 
-TODO: Probably just delete this
-- Insert stats
-- Insert reflection
-  - Gluck, dass sie dazu bereit waren
-  - Productivity stats waeren cooL
 #### Logik für datenkonsitenz auf Serverseite migrieren
 TODO
 Da
@@ -103,13 +98,12 @@ Als nächstes hatte ich versucht, ob es sinnvoll möglich ist, die Runner lokal 
 
 Dadurch haben wir Runner auf Computern mit Desktop CPUs, die für unsere hauptsächlich nicht parallel ausgeführten Jobs ein ganzes Stück schneller sind als Server CPUs. Der einzige Nachteil ist, dass Jobs manchmal fehlschlagen können, weil ein Entwickler seinen Computer ausschaltet während der Job dort ausgeführt wird. In der Praxis ist das aber nur knapp ein mal pro Monat passiert. Mit dieser Lösung konnte ich ohne mehrkosten zu verursachen die Dauer unserer Pipelines von 7-10 auf 1-4 Minuten zu reduzieren (je nachdem ob noch Container geladen werden müssen und wie viele Runner online sind). 
 
-TODO
-Anderes:
-- vercel deploys
-- firestore emulator (+ hostname)
-- testcafe
-- keine unittests
-- sentry
+#### Andere Aufgaben
+Außerdem habe ich während meiner Zeit bei getpacked noch ein paar andere Dinge getan:
+- Automatisieren von vercel deploys
+- Aufsetzen von firestore emulatoren
+- Versuch des etablieren von End-To-End Tests mit testcafe
+- Aufsetzen von Sentry zum Fehlertracking
 
 Reflexion
 ---------
