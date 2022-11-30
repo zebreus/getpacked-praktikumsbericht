@@ -11,7 +11,7 @@ Ich habe mir von dem Praktikum hauptsächlich erhofft, Einblick darüber, wie We
 
 Ich habe mich am Ende für getpacked entschieden, weil ich bei ihnen den Eindruck hatte, da das reduzieren von Komplexität einen hohen Stellenwert hatten. Überzeugt haben mich vor allem drei Grundsatzentscheidungen die das gut bezeugen. Zum einen, dass das Unternehmen keine eigenen Server anmieten oder betreiben wird, sondern komplett auf serverless SaaS Technologien setzt. Zum anderen, dass keine Smartphone App, sondern nur eine mobiloptimierte Webanwendung entwickelt wird. Ausserdem wird das Projekt Server- und Clientseitig in JavaScript im selben Stil geschrieben. 
 
-Meine Projekte während der Praxisphase waren hauptächlich im Softwarengineering Bereich angesiedelt.
+Meine Projekte während der Praxisphase waren hauptsächlich im Softwarengineering Bereich angesiedelt.
 
 Faktenreiche Kurzcharakteristik des Praktikums und der Institution
 ------------------------------------------------------------------
@@ -22,9 +22,11 @@ Im Frühjahr 2021 wurde die getpacked GmbH offiziell gegründet, vorher war getp
 
 ### Aufgaben im Praktikum
 Meine Aufgaben in der Praxisphase waren hauptsächlich die Aufbereitung des Programmcodes und der Entwicklungsinfrastruktur.
+
 #### Einführung einer Continuous Integration/ Continuous Delivery Infrastruktur
 Mein erstes Projekt bei getpacked war es eine CI/CD pipeline aufzusetzen und einzuführen. Wir haben uns dabei für GitLab CI entschieden, da wir GitLab sowieso schon als Softwareentwicklungsplattform eingesetzt haben und wir unseren Technologiestack nicht komplizierter machen wollten, als nötig. Da ich vorher schon relativ viel Erfahrung mit verschiedenen CI Programmen gesammelt hatte, ging das aufsetzen von GitLab CI relativ schnell. Was länger gedauert hatte war, die Geschwindigkeit der Builds zu erhöhen. Da unser Projekt circa 500MB an Abhänigkeiten hat, war es keine angebrachte Lösung diese bei jedem Build erneut herunterzuladen. Die in GitLab CI integrierten Funktionen zum speichern von Artefakten waren bei der Menge auch zu langsam um sinnvoll eingesetzt werden zu können. Die Lösung für das Probblem war es dann bei jeder Änderung der Dependencies einen neuen Container mit allen Dependencies zu erstellen und den für diesen und alle zunkünftigen Builds zu benutzen.
 Dadurch konnten wir die Deploymentfrequenz von ~3mal pro Woche auf ~4mal pro Tag erhöhen.
+
 #### Sicherstellung einer hohen Codequalitaet
 Eine Aufgabe die durchgehend an der ich durchgehend beschaeftigt war, war die Verbesserung der Codequalitaet. Die Entwicklung bei getpacked wurde oft durch Bugs ausgebremst, die durch klareren Code vermeidbar gewesen waeren. Oft war es allein durch die Betrachtung ihrer Schnittstelle unklar, wie Komponenten verwendet werden, damit sie das tun was man erwartet. Der Code in den Komponenten war allerdings auch oft zu komplex, um schnell zu verstehen, wie sie verwendet werden. Ausserdem war die Formatierung des Quelltexts inkonsistent, und der Zustand der Anwendung war nicht immer klar. Einige Massnahmen zur Sicherstellung einer der Codequalitaet wurden mir anfangs aufgetragen, andere habe ich selbst erarbeitet.
 ##### Erarbeiten von Massnahmen zur Sicherstellung der Codequalitaet
@@ -61,10 +63,12 @@ Guide
 
 #### Umstellen der Codebase auf striktes TypeScript
 Eine meiner ersten Aufgaben war es die Codebase der Webanwendung für eine Umstellung von JavaScript auf TypeScript vorzubereiten. Das Team hatte vorher schon angefangen TypeScript im Serverseitigem Code zu verwenden. Dort wurden aber die meisten Funktionen zur starken Überprüfung der Typen abgestellt, um die Entwicklungsgeschwindigkeit zu erhöhen, wodurch allerdings auch keine der Vorteile von Typescript genutzt wurden.
+
 ##### Was ist TypeScript und wie wollen wir es nutzen
 Die Grundidee hinter TypeScript ist, das es normales Javascript mit zusaetzlichen Typinformationen ist, die beim kompiliern erst zur Ueberpruefung der Korrektheit benutzt und dann komplett entfernt werden. Uebrig bleibt normales JavaScript. Als Folge dessen hat TypeScript die Eigenschaft, dass es beim kompilieren komplett statisch getyped ist, bei der Ausfuehrung aber dynamisch. Man kann deshalb in Typescript den Typ einer Variable auch als `any` angeben und damit komplett auf Ueberpruefung der Korrektheit in der Verwendung dieser Variable verzichten. Das fuehrt allerdings zu weniger Klarheit darueber, welche Werte Variablen annehmen koennen. Damit gibt TypeScript die Entscheidung, wie stark Typen ueberprueft werden sollen an die Entwickler.
 
 Die erste Teilaufgabe der Umstellen der Codebase auf TypeScript war es also das zu entscheiden. Dazu habe ich mit allen Teammitgliedern gesprochen um zu verstehen, wie sie dazu stehen. Die Grundhaltung war etwas Angst, dass durch TypeScript die allgemeine Produktivitaet sinkt, da man sich mehr Gedanken darueber machen muss, wie die Schnittstellen von Komponenten aussehen und wie man diese in TypeScript definiert. Allerdings sind genau das auch die Gruende, weshalb wir zu TypeScript wechseln wollten. Klar definierte und gut durchdachte Komponenten sind wesentlich einfacher zu verwenden und wartbarer. Deshalb haben wir uns dazu entschieden TypeScript so strikt wie moeglich einzustellen.
+
 ##### Und was hab ich dafuer gemacht
 Die zwei groessten Herausforderungen bei der Umstellung auf Typescript waren zum einen herauszufinden was die Typen in existierendem Code sind und sicherzustellen das auch aller zukuenftige Quelltext mit sinnvollen und korrekten Typen versehen ist. 
 
@@ -83,6 +87,7 @@ Da
 
 #### Umstellen auf css auf Komponentenebene
 Bei normalen css Stylesheets erstellt man global gültige Klassennamen, die auf alle HTML Elemente einer bestimmten Klasse angewandt werden. In Komponentenbasieren Webanwendungen führt das oft zu Problemen, da wenn mehrere Komponenten den selben Klassennamen verwenden, sie sich dadurch auch oft unbemerkt gegenseitig beinflussen. In getpacked hatten wir zum Beispiel die Klasse `cartButton` die zum einen einen Knopf mit dem Preis des aktuellen Warenkorbs, der diesen auch öffnet gestaltet, zum anderen aber auch den Knopf um ein Produkt in den Warenkorb hinzuzufügen. Da beide Knöpfe relativ ähnlich aussahen, ist nicht aufgefallen, dass beide den die selbe CSS Klasse benutzen, bis wir die Farbe von einem anpassen wollten, was dann aber auch den anderen betroffen hat. Die Lösung war das Problem war es auf css mdoule umzustellen, dabei sind Klassennamen immer an eine Komponente gebunden. Erreicht wird das dadurch, dass die Namen der CSS Klassen im Buildprozess so modifiziert werden, dass sie einzigartig sind. So wird aus dem `cartButton` in der Basket Komponent zum Beispiel `Basket_cartButton_be8j3`.
+
 #### Performance optimierung eine Webanwendung
 Eines meiner Projekte war die Optimierung der Ladezeit der Webseite.
 Da getpacked mit React gebaut ist, wurde komplett auf clientseitiges rendering gesetzt. Da die Unterscheidug zwischen verschiedenen Unterseiten (z.B. der Shop für Kunden oder das Admininterface zur verwaltung der Shops) dabei nur Clientseitig erfolgt wurden auf jedet Seite alle Skripte geladen. Ausserdem wird bei clientseitigem rendering erstmal eine leere Webseite qusfeliefert, die dann noch mit Inhalt gefüllt werden muss, was auch etwas Zeit braucht.
@@ -101,9 +106,16 @@ Die Umstellung der Anwendung auf Next hat etwa einen Monat gedauert, da mit ihr 
 - Aufteilen der Seite in untersieten relativ unkompliziert
 - Erster durchlauf muss auch serverseitig funktionieren
 
+#### Gitlab CI pipeline optimieren
+Am Anfang meines Praktikum hatte ich Gitlab CI aufgesetzt. Die CI war so konfiguriert, dass jeder Branch der auf den `main` Branch gemerged werden soll erst die CI tests erfolgreich durchlaufen muss. Mit der Zeit hat sich allerdings herausgestellt, dass das unsere Entwicklungsgeschwindigkeit ein wenig ausbremst. Wenn man erst 10 Minuten warten muss, bis die Pipeline durchgelaufen ist. Meine Aufgabe war es dann auszuwerten, warum die Pipelines so lange brauchen. Der Hauptgrund war, dass die von Gitlab gehosteten Jobrunner den Dockercontainer in dem die Tests ausgeführt wurden für jeden Schritt immer wieder neu herunterladen mussten, da für jeden Schritt ein anderer Runner verwended wird.
+
+Die Lösung für das Problem ist es in der Regel eigene Runner zu hosten, die die Dockerimages lokal vorhalten, sobald sie einmal heruntergeladen wurden. Eigene Runner auf Servern zu hosten kam für uns allerdings nicht in Frage, da schnelle Server doch relativ teuer sind. Gitlab bietet zwar die Möglichkeit ein Kubernetes Cluster anzubinden und darauf dann bei Bedarf Runner zu erschaffen. Der administrativa Aufwand wäre allerdings ziemlich hoch gewesen und es hätte unsere Probleme auch nicht komplett gelöst, da Kubernetes auch immer mindestens einen aktiven Server braucht, der Kosten verursacht.
+
+Als nächstes hatte ich versucht, ob es sinnvoll möglich ist, die Runner lokal auf den Computern der Entwickler laufen zu lassen. Den Runner auszuführen war überraschend unkompliziert, da er als docker container verfügbar ist. Die Kopplung mit Gitlab war auch einfach zu lösen, dabei wird beim Starten des Runners nur ein Token für das Projekt benötigt, das wir auf dem selben Kanal wie unsere restlichen secrets verteilen können. Das letzte Problem war noch das die Runner automatisch gestartet werden. Meine erste Idee war es dazu den Runner beim starten der Anwendung im Debug modus automatisch mitzustarten. Das hatte allerdings den Nachteil, dass die Runner immer gestartet wurden, auch wenn man es nicht wollte (z.B. weil man wusste, das man gleich offline geht). Ausserdem war es schwer möglich herauszufinden, wann der Runner beendet werden sollte. Nach etwas Recherche habe ich herausgefunden, dass vscode eine integrierte Funktion hat, um den Nutzer beim Öffnen eines Projekts zu fragen, ob ein bestimmter Task ausgeführt werden soll. Den Runner darüber zu starten hat den Vorteil, dass der Entwickler nichts machen muss außer das Popup zu bestätigen und der Runner auch wieder beendet wird, sobald man für den Tag fertig entwickelt hat.
+
+Dadurch haben wir Runner auf Computern mit Desktop CPUs, die für unsere hauptsächlich nicht parallel ausgeführten Jobs ein ganzes Stück schneller sind als Server CPUs. Der einzige Nachteil ist, dass Jobs manchmal fehlschlagen können, weil ein Entwickler seinen Computer ausschaltet während der Job dort ausgeführt wird. In der Praxis ist das aber nur knapp ein mal pro Monat passiert. Mit dieser Lösung konnte ich ohne mehrkosten zu verursachen die Dauer unserer Pipelines von 7-10 auf 1-4 Minuten zu reduzieren (je nachdem ob noch Container geladen werden müssen und wie viele Runner online sind). 
 
 Anderes:
-- gitlab runner local
 - vercel deploys
 - firestore emulator (+ hostname)
 - testcafe
