@@ -128,6 +128,9 @@ Außerdem habe ich während meiner Zeit in der Praxisphase angefangen viel mit g
 
 Auch etwas, dass ich vor der Praxisphase überhaupt nicht auf dem Schirm hatte waren nocode workflow automation Programme, bei denen man verschiedene APIs relativ unkompliziert grafisch ansteuern kann. Die sind überraschend praktisch, wenn man einfach nur zwei Dinge schnell verbinden will, aber dafür nicht extra einen Server aufsetzen möchte. Wir konnten es damit zum Beispiel relativ unkompliziert umsetzen, dass bei jeder neuen Bestellung eine Nachricht darüber in einen Slack Channel gesendet wird.
 
+## Learnings
+Neben den technisches Skills habe ich auf sozialer Ebene gelernt mir keine neuen Aufgaben zu nehmen, wenn ich sowieso schon genug zu tun habe. 
+
 ### Höhepunkte
 #### Arbeiten in einem coolen Team
 An dem Praktikum hat mir besonders gefallen mit Leuten die aus so einer Startup Blase kommen zu arbeiten. Im Vergleich zu meiner vorherigen Arbeitserfahrung waren alle viel motivierter etwas cooles zu bauen und dabei auch noch Spaß zu haben. Außerdem wurde viel Wert auf gute Kommunikation gelegt was mir auch sehr gefallen hat. Wir hatten zum Beispiel immer eine guten Überblick darüber wer gerade was macht und wenn sich herausgestellt hat das jemand anders schon Erfahrung mit einem Thema hatte konnte man das dann einfach schnell zusammen bearbeiten. Was ich auch cool fand war das sich niemand zu fein war um Hilfe zu fragen, so hab ich wahrscheinlich ähnlich viel Hilfe gegeben wie bekommen. Arbeit in so einem offenen Team war für mich eine neue Erfahrung, gerne wieder.
@@ -151,16 +154,8 @@ Es ist mir besonders gegen Anfang oft passiert, dass ich mich dazu verleiten las
 #### Reden mit Leuten die ich nicht gut einschätzen kann
 Wenn ich mit Leuten reden muss, die ich nicht gut einschätzen kann, fühle ich mich meistens sehr unsicher. Weil ich nicht genau weiß wie ich mich verhalten soll um nicht zu seltsam zu wirken. Das scheint allerdings größtenteils ein Problem zu sein, das nur in meinem Kopf stattfindet, da ich nie das Feedback bekommen habe, dass ich da tatsächlich seltsam gewirkt habe. Nachdem ich ein paar mal mit jemandem Kontakt hatte legt sich das aber in der Regel und ich fühle mich sicherer. Auch wenn ich mir solche Situationen unangenehm sind, habe ich festgestellt, dass es mir auch irgendwie Spaß macht in solchen Situationen zu sein.
 
-## Learnings
-Neben den technisches Skills habe ich auf sozialer Ebene gelernt mir keine neuen Aufgaben zu nehmen, wenn ich sowieso schon genug zu tun habe. 
-
-### Von andern eingeschätzt: s. Brief vom Chef
-TODO: Maybe remove
-Vergleich s. Stärken und Schwächen von oben im Vergleich zum Chef-Brief
 
 
 ### Fazit
 
-#### Aufgaben waren sehr eigenverantwortlich gesucht, hat Dir aber gelegen 😊 -> gute Passung: Freiheit vom Team aus, dass Eigenverantwortung möglich 
-Alle Ziele erreicht, also erfolgreiches Praktikum. 
-Jetzt Arbeitsstelle bei was, was damit zusammenhängt -> Coole Möglichkeit
+Ich hatte in der Praxisphase viel Spaß und habe fast alle Ziele erreicht die ich mir gesetzt hatte.
