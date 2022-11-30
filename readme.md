@@ -21,7 +21,7 @@ getpacked ist ein Startup das eine Software as a service Lösung für online Bes
 Im Frühjahr 2021 wurde die getpacked GmbH offiziell gegründet, vorher war getpacked ein Teil der 360VIER GmbH. Aktuell hat das Unternehmen 8 Mitarbeiter, von denen 3 in der Entwicklung arbeiten. Die Firma hat rund 100 Kunden die mit getpacked erfolgreich ihre Produkte anbieten. 
 
 ### Aufgaben im Praktikum
-Meine Aufgaben in der Praxisphase waren hauptsächlich die Aufbereitung des Programmcodes und der Entwicklungsinfrastruktur.
+Meine Aufgaben in der Praxisphase waren hauptsächlich die Aufbereitung des Programmcodes und der Entwicklungsinfrastruktur, aber auch viele andere Dinge.
 
 #### Einführung einer Continuous Integration/ Continuous Delivery Infrastruktur
 Mein erstes Projekt bei getpacked war es eine CI/CD pipeline aufzusetzen und einzuführen. Wir haben uns dabei für GitLab CI entschieden, da wir GitLab sowieso schon als Softwareentwicklungsplattform eingesetzt haben und wir unseren Technologiestack nicht komplizierter machen wollten, als nötig. Da ich vorher schon relativ viel Erfahrung mit verschiedenen CI Programmen gesammelt hatte, ging das aufsetzen von GitLab CI relativ schnell. Was länger gedauert hatte war, die Geschwindigkeit der Builds zu erhöhen. Da unser Projekt circa 500MB an Abhänigkeiten hat, war es keine angebrachte Lösung diese bei jedem Build erneut herunterzuladen. Die in GitLab CI integrierten Funktionen zum speichern von Artefakten waren bei der Menge auch zu langsam um sinnvoll eingesetzt werden zu können. Die Lösung für das Probblem war es dann bei jeder Änderung der Dependencies einen neuen Container mit allen Dependencies zu erstellen und den für diesen und alle zunkünftigen Builds zu benutzen.
@@ -31,6 +31,7 @@ Dadurch konnten wir die Deploymentfrequenz von ~3mal pro Woche auf ~4mal pro Tag
 Eine Aufgabe die durchgehend an der ich durchgehend beschaeftigt war, war die Verbesserung der Codequalitaet. Die Entwicklung bei getpacked wurde oft durch Bugs ausgebremst, die durch klareren Code vermeidbar gewesen waeren. Oft war es allein durch die Betrachtung ihrer Schnittstelle unklar, wie Komponenten verwendet werden, damit sie das tun was man erwartet. Der Code in den Komponenten war allerdings auch oft zu komplex, um schnell zu verstehen, wie sie verwendet werden. Ausserdem war die Formatierung des Quelltexts inkonsistent, und der Zustand der Anwendung war nicht immer klar. Einige Massnahmen zur Sicherstellung einer der Codequalitaet wurden mir anfangs aufgetragen, andere habe ich selbst erarbeitet.
 ##### Erarbeiten von Massnahmen zur Sicherstellung der Codequalitaet
 Hier eine ungeordnete Liste an allen sachen, die ich gemacht habe
+TODO
 Die die eigentliche Logik nicht beeinflussen
 - Typen & Typescript
 - linter regeln definieren, als fehler
@@ -50,13 +51,16 @@ Die die Logik beinflussen
 - Code aus Anfangszeiten von getpacked
 Da der Code aus den ersten Monaten von getpacked 
 #### Erarbeiten von Schritten zur Verbesserung 
+TODO
 - Kein globales Styling
 - Nur striktes typescript ohne any
 - Einheitliche code formatierung
 - Naming conventions
 #### Erarbeiten von Guidelines zur Verbesserung der Wartbarkeit
+TODO
 -
 ##### Warum brauchen wir sowas und was muss da rein.
+TODO
 Guide
 
 
@@ -69,19 +73,20 @@ Die Grundidee hinter TypeScript ist, das es normales Javascript mit zusaetzliche
 
 Die erste Teilaufgabe der Umstellen der Codebase auf TypeScript war es also das zu entscheiden. Dazu habe ich mit allen Teammitgliedern gesprochen um zu verstehen, wie sie dazu stehen. Die Grundhaltung war etwas Angst, dass durch TypeScript die allgemeine Produktivitaet sinkt, da man sich mehr Gedanken darueber machen muss, wie die Schnittstellen von Komponenten aussehen und wie man diese in TypeScript definiert. Allerdings sind genau das auch die Gruende, weshalb wir zu TypeScript wechseln wollten. Klar definierte und gut durchdachte Komponenten sind wesentlich einfacher zu verwenden und wartbarer. Deshalb haben wir uns dazu entschieden TypeScript so strikt wie moeglich einzustellen.
 
-##### Und was hab ich dafuer gemacht
+##### Und was habe ich dafuer gemacht
 Die zwei groessten Herausforderungen bei der Umstellung auf Typescript waren zum einen herauszufinden was die Typen in existierendem Code sind und sicherzustellen das auch aller zukuenftige Quelltext mit sinnvollen und korrekten Typen versehen ist. 
 
 Beim Herausfinden und Definieren von Typen in existierendem Code habe ich hauptsaechlich darauf gesetzt Annahmen ueber die Typen von Dingen aufzustellen und diese bei Unklarheit dann im Debugger zu verifizieren. Die Annahmen habe ich entweder durch Gespraeche mit den anderen Teammitgliedern oder durch den Kontext des Codes versucht aufzustellen. Meistens war es nicht noetig die Annahmen durch Tests zu ueberpruefen, da wenn alle Orte an denen ein Komponent verwendet wird mit Typen versehen sind, sich der Compiler beschwert, wenn etwas nicht passt.
 
 Nachdem die Kernkomponenten der Codebase mit Typen versehen waren, habe ich sichergestellt, dass auch aller neuer Code in striktem TypeScript geschrieben wird und  das der Rest der Codebase im Laufe der Zeit zu TypeScript wird. Dazu habe ich unter anderem Linterregeln eingefuehrt, die weder die explizite, noch die implizite Verwendung von `any` zu erlauben. Ich mit dem Team einen kurzen Crashkurs gemacht, damit alle ein Verstaendnis dafuer haben, wie und warum wir TypeScript einsetzen. Ausserdem habe ich dafuer gesorgt das Team stetig mit Informationen zum Anteil von TypeScript und JavaScript an der Codebase zu versorgen und es zu feiern, wenn der JavaScript Anteil sinkt.
 
-
+TODO: Probably just delete this
 - Insert stats
 - Insert reflection
   - Gluck, dass sie dazu bereit waren
   - Productivity stats waeren cooL
 #### Logik für datenkonsitenz auf Serverseite migrieren
+TODO
 Da
 #### Einarbeiten und verwenden verschiedener mir neuer Technologien
 
@@ -115,6 +120,7 @@ Als nächstes hatte ich versucht, ob es sinnvoll möglich ist, die Runner lokal 
 
 Dadurch haben wir Runner auf Computern mit Desktop CPUs, die für unsere hauptsächlich nicht parallel ausgeführten Jobs ein ganzes Stück schneller sind als Server CPUs. Der einzige Nachteil ist, dass Jobs manchmal fehlschlagen können, weil ein Entwickler seinen Computer ausschaltet während der Job dort ausgeführt wird. In der Praxis ist das aber nur knapp ein mal pro Monat passiert. Mit dieser Lösung konnte ich ohne mehrkosten zu verursachen die Dauer unserer Pipelines von 7-10 auf 1-4 Minuten zu reduzieren (je nachdem ob noch Container geladen werden müssen und wie viele Runner online sind). 
 
+TODO
 Anderes:
 - vercel deploys
 - firestore emulator (+ hostname)
@@ -132,6 +138,7 @@ Im Praktikum hatte ich mehrere Ziele und Aufgaben, vor allem wollte ich die Code
 #### Aufräumen und strukturieren
 Ich glaube ich konnte während meiner Zeit bei getpacked die Lesbarkeit und Wartbarkeit des Programms deutlich verbessern. Was ich in der Zeit besonders geschätzt habe, war das ich relativ viel Zeit in Dinge investieren durfte, die nicht direkt Features für das Produkt bringen, sondern nur langfristig die Geschwindigkeit mit der neue Dinge entwickelt werden können erhöhen. Ausserdem fand ich es cool, dass nahezu alle meiner Bestrebungen in die Richtungen auch von meinen Kollegen angenommen wurden. (Nur das entfernen von unbenutzten imports beim speichern ist auf Wiederstand gestossen).
 
+TODO
 - Noch irgendwie erwähnen, dass das schon irgendwie eins meiner Ziele von anfang an war, ich hab afaik sogar im Vorstellungsgespräch verlangt, dass ich 1 woche im Monat komplett auf refactoring setzen darf.
 
 #### Lernen von Webentwicklung
@@ -141,9 +148,12 @@ Webentwicklung mit React ist jetzt auch eine der Sachen die ich kann. Was mich �
 Während dem Praktikum konnte ich viele Werkzeuge ausprobieren. Teilweise kannte ich einige davon schon vorher und hatte nur noch keine Chance sie in der Praxis zu verwenden. Andere haben aber auch erst während der Praxisphase durch meine Kollegen meine Aufmerksamkeit gewonnen.
 Von Anfang wollte ich KI basierte automatische Vervollständigung  verwenden. Anfangs habe ich dazu tabnine benutzt, dann hatte ich die Möglichkeit GitHub Copilot einzusetzen und bin dann auch dabei geblieben, weil Copilot deutlich besser Vorschläge macht.
 Mit GitLab CI wollte ich auch ein weiteres CI tool kennenlernen und das hat auch funktioniert.
+
 Ein weiteres Werkzeug das ich zu schätzen gelernt habe, war der nix package manager, mit dem es ziemlich einfach möglich ist auf allen Computern in der selben Umgebung zu entwicklen. Wir hatten anfangs ab und an Probleme damit, dass jeder andere Versionen von verschiedenen Programmen installiert hatte. Mit nix konnten wir das nachhaltig lösen.
-Ein weiteres Werkzeug, das ich während meiner Zeit in der Praxisphase kennengelernt habe, war gitpod. Dabei handelt es sich im Grunde um eine IDE die komplett im Browser läuft. Vorallem bei Codereviews hat das den Prozess enorm beschleunigt, da man mit einem Klick auf dem Pullrequest direkt eine IDE mit den zu reviewenden Änderungen hat.
-Auch etwas, dass ich vor der Praxisphase überhaupt nicht auf dem Schirm hatte waren workflow automation Tools, bei denen man verschiedene APIs relativ unkompliziert grafisch ansteuern kann.
+
+Ausserdem habe ich während meiner Zeit in der Praxisphase angefangen viel mit gitpod zu arbeiten. Dabei handelt es sich im Grunde um vscode, aber es läuft komplett im Browser. Vorallem bei Codereviews hat das den Prozess enorm beschleunigt, da man mit einem Klick auf dem Pullrequest direkt eine IDE mit den zu reviewenden Änderungen hat.
+
+Auch etwas, dass ich vor der Praxisphase überhaupt nicht auf dem Schirm hatte waren nocode workflow automation Programme, bei denen man verschiedene APIs relativ unkompliziert grafisch ansteuern kann. Die sind überraschend praktisch, wenn man einfach nur zwei Dinge schnell verbinden will, aber dafür nicht extra einen Server aufsetzen möchte. Wir konnten es damit zum Beispiel relativ unkompliziert umsetzen, dass bei jeder neuen Bestellung eine Nachricht darüber in einen Slack Channel gesendet wird.
 
 ### Herausforderungen
 Die wohl grä
@@ -160,11 +170,13 @@ Also eigentlich nö. Weil konnte man nicht wissen. Und so mehr bei gelernt! Also
 #### Arbeiten in einem coolen Team
 An dem Praktikum hat mir besonders gefallen mit Leuten die aus so einer Startup Blase kommen zu arbeiten. Im Vergleich zu meiner vorherigen Arbeitserfahrung waren alle viel motivierter etwas cooles zu bauen und dabei auch noch Spaß zu haben. Außerdem wurde viel Wert auf gute Kommunikation gelegt was mir auch sehr gefallen hat. Wir hatten zum Beispiel immer eine guten Überblick darüber wer gerade was macht und wenn sich herausgestellt hat das jemand anders schon Erfahrung mit einem Thema hatte konnte man das dann einfach schnell zusammen bearbeiten. Was ich auch cool fand war das sich niemand zu fein war um Hilfe zu fragen, so hab ich wahrscheinlich ähnlich viel Hilfe gegeben wie bekommen. Arbeit in so einem offenen Team war für mich eine neue Erfahrung, gerne wieder.
 
-#### Inhaltliche Hoehepunkte 
+#### Inhaltliche Hoehepunkte
+TODO
 - automatische Fehlererkennung, dass nicht nur abstürzt oder so, sondern stattdessen automatische Nachricht. Einmal die Nachricht über ne fehlgeschlagene EBstellung, bei der Paypal kaputt war -> in wenigen Minuten behoben und ohne Kundenkontakt rechtzeitig für 3. Versuch des Kunden gelöst! 
 Hier kam Aufräumen -> Anpassung mit besserer Geschwindigkeit mit Fehlererkennung zusammen -> Hat alles geklappt! Hatte Sinn
 
 ### Was kann ich besonders gut im Vergleich?
+TODO
 selbstständig arbeiten (Aufgaben selbst suchen bei nur sehr losen Erwartungen)
 Sich Sachen selbst ergooglen (eigenständig Lösungen für Probleme finden, ohne Anleitung) Problemlöse-Kompetenz
 viele Möglichkeiten mit den automatischen Sachen und so waren dem Team nicht bekannt, aber Dir schon -> durchs Erklären hat sich das alles gefestigt
@@ -179,10 +191,12 @@ Es ist mir besonders gegen Anfang oft passiert, dass ich mich dazu verleiten las
 #### Reden mit Leuten die ich nicht gut einschätzen kann
 Wenn ich mit Leuten reden muss, die ich nicht gut einschätzen kann, fühle ich mich meistens sehr unsicher. Weil ich nicht genau weiss wie ich mich verhalten soll um nicht zu seltsam zu wirken. Das scheint allerdings größtenteils ein Problem zu sein, das nur in meinem Kopf stattfindet, da ich nie das Feedback bekommen habe, dass ich da tatsächlich seltsam gewirkt habe. Nachdem ich ein paar mal mit jemandem Kontakt hatte legt sich das aber in der Regel und ich fühle mich sicherer. Auch wenn ich mir solche Situationen unangenehm sind, habe ich festgestellt, dass es mir auch irgendwie Spaß macht in solchen Situationen zu sein.
 
-## Neu gelernt: 
+## Neu gelernt:
+TODO: Maybe remove
 - Manche Diskussionen nicht anzetteln, sondern die Aufgaben einfach erledigen, wie es einem gesagt wurde (sozialer Bereich)
 
 ### Von andern eingeschätzt: s. Brief vom Chef
+TODO: Maybe remove
 Vergleich s. Stärken und Schwächen von oben im Vergleich zum Chef-Brief
 
 
