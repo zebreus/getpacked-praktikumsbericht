@@ -114,9 +114,6 @@ Im Praktikum hatte ich mehrere Ziele und Aufgaben, vor allem wollte ich die Code
 #### Aufräumen und strukturieren
 Ich konnte während meiner Zeit bei getpacked die Lesbarkeit und Wartbarkeit des Programms deutlich verbessern. Was ich in der Zeit besonders geschätzt habe, war das ich relativ viel Zeit in Dinge investieren durfte, die nicht direkt Features für das Produkt bringen, sondern nur langfristig die Geschwindigkeit mit der neue Dinge entwickelt werden können erhöhen. Außerdem fand ich es cool, dass nahezu alle meiner Bestrebungen in die Richtungen auch von meinen Kollegen angenommen wurden. (Nur das entfernen von unbenutzten imports beim speichern ist auf Wiederstand gestoßen).
 
-TODO
-- Noch irgendwie erwähnen, dass das schon irgendwie eins meiner Ziele von anfang an war, ich hab afaik sogar im Vorstellungsgespräch verlangt, dass ich 1 woche im Monat komplett auf refactoring setzen darf.
-
 #### Lernen von Webentwicklung
 Webentwicklung mit React ist jetzt auch eine der Sachen die ich kann. Was mich überrascht hat, war es zu sehen, wie einfach man mit moderenen Frameworks/Tools komplexe UIs strukturien kann. Vorher hatte ich hauptsächlich mit Qt gearbeitet, dabei kam mir das erstellen von UIs immer unnötig aufwändig vor, ich hatte aber akzeptiert, dass es wahrscheinlich nicht viel einfacher geht. Außerdem kann ich jetzt JavaScript, was auch nützlich ist.
 
@@ -132,13 +129,14 @@ Außerdem habe ich während meiner Zeit in der Praxisphase angefangen viel mit g
 Auch etwas, dass ich vor der Praxisphase überhaupt nicht auf dem Schirm hatte waren nocode workflow automation Programme, bei denen man verschiedene APIs relativ unkompliziert grafisch ansteuern kann. Die sind überraschend praktisch, wenn man einfach nur zwei Dinge schnell verbinden will, aber dafür nicht extra einen Server aufsetzen möchte. Wir konnten es damit zum Beispiel relativ unkompliziert umsetzen, dass bei jeder neuen Bestellung eine Nachricht darüber in einen Slack Channel gesendet wird.
 
 ### Herausforderungen
-TODO
+Für mich war es am schwierigsten, dass man sich nicht immer in alles 
 Die wohl grä
 - anfangs Diskussionen über Geschäftsmodell, aber irgendwann ignoriert, weil nicht im Aufgabenbereich 
 - Web-Entwicklung, weil noch nie vorher gemacht; aber gut geklappt, weil Programmieren an sich schon bekannt + Google -> hat gereicht; selbst aufs Projekt bezogen beigebracht -> Projekt bzw Praktikum in dem Bereich hat geholfen, dass Web-Entwicklung jetzt deutlich routinierter und kompetenter (alle Möglichkeiten bekannt) ablaufen würde; 
 
 
 ## Irgendwas anders machen?
+Nein.
 TODO
 Idee mit Geschwindigkeit hinschreiben und dann quasi Argumente dagegen 😊
 - weniger Wert auf guten Code, mehr auf Geschwindigkeit? Weil: Firma jetzt pleite! Langfristig schneller durch guten Code jetzt irrelevant. ABER: Konnte man da nicht wissen -> nächstes Mal vielleicht anderen Fokus legen…? Entspricht aber nicht unbedingt eigenen Werten, deshalb wenn dann Fokus nur in Absprache mit Firma/Vorgesetzten verschieben (SOLL es später wiederverwendbar/anpassbar bleiben?) 
@@ -148,12 +146,13 @@ Also eigentlich nö. Weil konnte man nicht wissen. Und so mehr bei gelernt! Also
 #### Arbeiten in einem coolen Team
 An dem Praktikum hat mir besonders gefallen mit Leuten die aus so einer Startup Blase kommen zu arbeiten. Im Vergleich zu meiner vorherigen Arbeitserfahrung waren alle viel motivierter etwas cooles zu bauen und dabei auch noch Spaß zu haben. Außerdem wurde viel Wert auf gute Kommunikation gelegt was mir auch sehr gefallen hat. Wir hatten zum Beispiel immer eine guten Überblick darüber wer gerade was macht und wenn sich herausgestellt hat das jemand anders schon Erfahrung mit einem Thema hatte konnte man das dann einfach schnell zusammen bearbeiten. Was ich auch cool fand war das sich niemand zu fein war um Hilfe zu fragen, so hab ich wahrscheinlich ähnlich viel Hilfe gegeben wie bekommen. Arbeit in so einem offenen Team war für mich eine neue Erfahrung, gerne wieder.
 
-#### Inhaltliche Höhepunkte
-TODO
-- automatische Fehlererkennung, dass nicht nur abstürzt oder so, sondern stattdessen automatische Nachricht. Einmal die Nachricht über ne fehlgeschlagene EBstellung, bei der Paypal kaputt war -> in wenigen Minuten behoben und ohne Kundenkontakt rechtzeitig für 3. Versuch des Kunden gelöst! 
-Hier kam Aufräumen -> Anpassung mit besserer Geschwindigkeit mit Fehlererkennung zusammen -> Hat alles geklappt! Hatte Sinn
+#### Technischer Höhepunkt
+Sehr viel von dem was ich für die Entwicklungsinfrastruktur getan habe, spiegelt sich für mich in einem Fehler, und der Geschwindigkeit mit der wir darauf reagieren konnten, wieder. Zuerst kam über Sentry eine Fehlermeldung, dass die Seite bei einem Nutzer während des Bestellvorgangs abgestürzt ist. Nachdem ich die Benachrichtigung über den Fehler bekommen habe, konnte ich direkt aus Sentry zur Stelle im Code gehen, wo der Crash passiert ist. Da der Code mit dem Bug noch JavaScript war hab ich den zu TypeScript konvertiert. Dabei hat TypeScript auch direkt den Fehler erkannt, da bei dem Kunden ein Wert `undefined` war, von dem vorher davon ausgegangen wurde, dass er immer eine Zahl ist. Da es an der Stelle eigentlich korrekt war, dass der Wert auch undefiniert sein kann habe ich schnell einen standart Wert für den Fall gesetzt und meine Änderungen gepushed. Die CI hat die Änderungen dann innerhalb von wenigen Minuten direkt deployed. Von der Fehlermeldung bis zum deployten Bugfix sind insgesamt weniger als 5 Minuten vergangen. In der Zwischenzeit hatte der Nutzer einen zweiten Bestellversuch gestartet, der dank des schnellen Bugfixes auch erfolgreich war.
+
+Für mich war das ein Höhepunkt, weil wir ohne das was ich gemacht habe, den Fehler weder so schnell gefunden, noch so schnell behoben hätten.
 
 ### Was kann ich besonders gut im Vergleich?
+#### Selbstständig sinnvolle aufgaben suchen
 TODO
 selbstständig arbeiten (Aufgaben selbst suchen bei nur sehr losen Erwartungen)
 Sich Sachen selbst ergooglen (eigenständig Lösungen für Probleme finden, ohne Anleitung) Problemlöse-Kompetenz
@@ -169,9 +168,8 @@ Es ist mir besonders gegen Anfang oft passiert, dass ich mich dazu verleiten las
 #### Reden mit Leuten die ich nicht gut einschätzen kann
 Wenn ich mit Leuten reden muss, die ich nicht gut einschätzen kann, fühle ich mich meistens sehr unsicher. Weil ich nicht genau weiß wie ich mich verhalten soll um nicht zu seltsam zu wirken. Das scheint allerdings größtenteils ein Problem zu sein, das nur in meinem Kopf stattfindet, da ich nie das Feedback bekommen habe, dass ich da tatsächlich seltsam gewirkt habe. Nachdem ich ein paar mal mit jemandem Kontakt hatte legt sich das aber in der Regel und ich fühle mich sicherer. Auch wenn ich mir solche Situationen unangenehm sind, habe ich festgestellt, dass es mir auch irgendwie Spaß macht in solchen Situationen zu sein.
 
-## Neu gelernt:
-TODO: Maybe remove
-- Manche Diskussionen nicht anzetteln, sondern die Aufgaben einfach erledigen, wie es einem gesagt wurde (sozialer Bereich)
+## Learnings
+Neben den technisches Skills habe ich auf sozialer Ebene gelernt mir keine neuen Aufgaben zu nehmen, wenn ich sowieso schon genug zu tun habe.
 
 ### Von andern eingeschätzt: s. Brief vom Chef
 TODO: Maybe remove
