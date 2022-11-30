@@ -157,9 +157,10 @@ Idee mit Geschwindigkeit hinschreiben und dann quasi Argumente dagegen 😊
 Also eigentlich nö. Weil konnte man nicht wissen. Und so mehr bei gelernt! Also gerade für als Praktikum richtig so gewesen.
 
 ### Höhepunkte
-- die Leute (unternehmerische Meschen): neue Erfahrung in der Einstellung, Lebensstil, Verhalten im Team (Reflexion dazu: dass viel Kommunikation möglich, war gut (übers Projekt, aber auch persönlich); Arbeit in so einem „engen“ Team war neue Erfahrung, gerne wieder)
+#### Arbeiten in einem coolen Team
+An dem Praktikum hat mir besonders gefallen mit Leuten die aus so einer Startup Blase kommen zu arbeiten. Im Vergleich zu meiner vorherigen Arbeitserfahrung waren alle viel motivierter etwas cooles zu bauen und dabei auch noch Spaß zu haben. Außerdem wurde viel Wert auf gute Kommunikation gelegt was mir auch sehr gefallen hat. Wir hatten zum Beispiel immer eine guten Überblick darüber wer gerade was macht und wenn sich herausgestellt hat das jemand anders schon Erfahrung mit einem Thema hatte konnte man das dann einfach schnell zusammen bearbeiten. Was ich auch cool fand war das sich niemand zu fein war um Hilfe zu fragen, so hab ich wahrscheinlich ähnlich viel Hilfe gegeben wie bekommen. Arbeit in so einem offenen Team war für mich eine neue Erfahrung, gerne wieder.
 
-### Am meisten stolz/ auch Höhepunkt: 
+#### Inhaltliche Hoehepunkte 
 - automatische Fehlererkennung, dass nicht nur abstürzt oder so, sondern stattdessen automatische Nachricht. Einmal die Nachricht über ne fehlgeschlagene EBstellung, bei der Paypal kaputt war -> in wenigen Minuten behoben und ohne Kundenkontakt rechtzeitig für 3. Versuch des Kunden gelöst! 
 Hier kam Aufräumen -> Anpassung mit besserer Geschwindigkeit mit Fehlererkennung zusammen -> Hat alles geklappt! Hatte Sinn
 
