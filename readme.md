@@ -112,7 +112,7 @@ Im Praktikum hatte ich mehrere Ziele und Aufgaben, vor allem wollte ich die Code
 
 ### Ziele erfüllt:
 #### Aufräumen und strukturieren
-Ich glaube ich konnte während meiner Zeit bei getpacked die Lesbarkeit und Wartbarkeit des Programms deutlich verbessern. Was ich in der Zeit besonders geschätzt habe, war das ich relativ viel Zeit in Dinge investieren durfte, die nicht direkt Features für das Produkt bringen, sondern nur langfristig die Geschwindigkeit mit der neue Dinge entwickelt werden können erhöhen. Außerdem fand ich es cool, dass nahezu alle meiner Bestrebungen in die Richtungen auch von meinen Kollegen angenommen wurden. (Nur das entfernen von unbenutzten imports beim speichern ist auf Wiederstand gestoßen).
+Ich konnte während meiner Zeit bei getpacked die Lesbarkeit und Wartbarkeit des Programms deutlich verbessern. Was ich in der Zeit besonders geschätzt habe, war das ich relativ viel Zeit in Dinge investieren durfte, die nicht direkt Features für das Produkt bringen, sondern nur langfristig die Geschwindigkeit mit der neue Dinge entwickelt werden können erhöhen. Außerdem fand ich es cool, dass nahezu alle meiner Bestrebungen in die Richtungen auch von meinen Kollegen angenommen wurden. (Nur das entfernen von unbenutzten imports beim speichern ist auf Wiederstand gestoßen).
 
 TODO
 - Noch irgendwie erwähnen, dass das schon irgendwie eins meiner Ziele von anfang an war, ich hab afaik sogar im Vorstellungsgespräch verlangt, dass ich 1 woche im Monat komplett auf refactoring setzen darf.
