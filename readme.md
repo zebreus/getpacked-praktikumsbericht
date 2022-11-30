@@ -128,20 +128,6 @@ Außerdem habe ich während meiner Zeit in der Praxisphase angefangen viel mit g
 
 Auch etwas, dass ich vor der Praxisphase überhaupt nicht auf dem Schirm hatte waren nocode workflow automation Programme, bei denen man verschiedene APIs relativ unkompliziert grafisch ansteuern kann. Die sind überraschend praktisch, wenn man einfach nur zwei Dinge schnell verbinden will, aber dafür nicht extra einen Server aufsetzen möchte. Wir konnten es damit zum Beispiel relativ unkompliziert umsetzen, dass bei jeder neuen Bestellung eine Nachricht darüber in einen Slack Channel gesendet wird.
 
-### Herausforderungen
-Für mich war es am schwierigsten, dass man sich nicht immer in alles 
-Die wohl grä
-- anfangs Diskussionen über Geschäftsmodell, aber irgendwann ignoriert, weil nicht im Aufgabenbereich 
-- Web-Entwicklung, weil noch nie vorher gemacht; aber gut geklappt, weil Programmieren an sich schon bekannt + Google -> hat gereicht; selbst aufs Projekt bezogen beigebracht -> Projekt bzw Praktikum in dem Bereich hat geholfen, dass Web-Entwicklung jetzt deutlich routinierter und kompetenter (alle Möglichkeiten bekannt) ablaufen würde; 
-
-
-## Irgendwas anders machen?
-Nein.
-TODO
-Idee mit Geschwindigkeit hinschreiben und dann quasi Argumente dagegen 😊
-- weniger Wert auf guten Code, mehr auf Geschwindigkeit? Weil: Firma jetzt pleite! Langfristig schneller durch guten Code jetzt irrelevant. ABER: Konnte man da nicht wissen -> nächstes Mal vielleicht anderen Fokus legen…? Entspricht aber nicht unbedingt eigenen Werten, deshalb wenn dann Fokus nur in Absprache mit Firma/Vorgesetzten verschieben (SOLL es später wiederverwendbar/anpassbar bleiben?) 
-Also eigentlich nö. Weil konnte man nicht wissen. Und so mehr bei gelernt! Also gerade für als Praktikum richtig so gewesen.
-
 ### Höhepunkte
 #### Arbeiten in einem coolen Team
 An dem Praktikum hat mir besonders gefallen mit Leuten die aus so einer Startup Blase kommen zu arbeiten. Im Vergleich zu meiner vorherigen Arbeitserfahrung waren alle viel motivierter etwas cooles zu bauen und dabei auch noch Spaß zu haben. Außerdem wurde viel Wert auf gute Kommunikation gelegt was mir auch sehr gefallen hat. Wir hatten zum Beispiel immer eine guten Überblick darüber wer gerade was macht und wenn sich herausgestellt hat das jemand anders schon Erfahrung mit einem Thema hatte konnte man das dann einfach schnell zusammen bearbeiten. Was ich auch cool fand war das sich niemand zu fein war um Hilfe zu fragen, so hab ich wahrscheinlich ähnlich viel Hilfe gegeben wie bekommen. Arbeit in so einem offenen Team war für mich eine neue Erfahrung, gerne wieder.
